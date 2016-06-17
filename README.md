@@ -5,7 +5,7 @@ Page Object Framework using cucumber jvm (java) and Selenium java.
 
 http://morty.fam***-*****.com:8585
 
-Brand_Setup - Generates information from website brand pages and extracts it to xlsx spreadsheet
+Brand_Setup - Generates information from website brand pages and extracts it to xlsx spreadsheet <br>
 Item_Setup - Generates information from website brand and item pages and extracts to xlsx spreadsheet. 
 
 The following is data driven:
