@@ -1,6 +1,6 @@
 @seo2
 @all
-Feature: The Title length of all Pages should be in a rage
+Feature: The Title length of all Pages should be in a particular range
 
   Scenario Outline: I will validate the length of the Page Title
     Given I want to the check the content of the url "<URL>"
