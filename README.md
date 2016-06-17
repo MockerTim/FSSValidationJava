@@ -1,9 +1,11 @@
-cucumberjvm-selenium-pageObject
+#Validation test - FSS Brand & Item pages
 =====================
 
 Page Object Framework using cucumber jvm (java) and Selenium java.<br><br><br>
 
 http://morty.fam***-*****.com:8585<br><br><br>
+
+#What do these tests in jenkins do?
 
 Brand_Setup - Generates information from website brand pages and extracts it to xlsx spreadsheet <br>
 Item_Setup - Generates information from website brand and item pages and extracts to xlsx spreadsheet. <br><br>
