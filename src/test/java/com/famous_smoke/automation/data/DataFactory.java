@@ -59,12 +59,14 @@ public final class DataFactory {
     public static BrandPageData createBrandPage(final BasePageData basePageData,
                                                 final String header1,
                                                 final String description,
-                                                final boolean identified) {
+                                                final boolean identified,
+                                                final boolean naGif) {
         return new BrandPageData(
                 basePageData,
                 header1,
                 description,
-                identified
+                identified,
+                naGif
         );
     }
 
@@ -74,7 +76,8 @@ public final class DataFactory {
                                                         final Collection<String> specs,
                                                         final String pricing,
                                                         final String rating,
-                                                        final Boolean identified) {
+                                                        final Boolean identified,
+                                                        final Boolean naGif) {
         return new BrandItemPageData(
                 baseData,
                 header1,
@@ -82,7 +85,8 @@ public final class DataFactory {
                 specs,
                 pricing,
                 rating,
-                identified
+                identified,
+                naGif
         );
     }
 

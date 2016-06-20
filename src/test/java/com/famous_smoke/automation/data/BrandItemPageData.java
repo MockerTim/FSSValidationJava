@@ -1,5 +1,7 @@
 package com.famous_smoke.automation.data;
 
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -21,6 +23,7 @@ public class BrandItemPageData extends BasePageData {
     private final String pricing;
     private final String rating;
     private final Boolean identified;
+    private final Boolean naGif;
 
     public BrandItemPageData(final BasePageData basePageData,
                              final String header1,
@@ -28,7 +31,8 @@ public class BrandItemPageData extends BasePageData {
                              final Collection<String> specs,
                              final String pricing,
                              final String rating,
-                             final Boolean identified) {
+                             final Boolean identified,
+                             final Boolean naGif) {
         super(
                 basePageData.getURL(),
                 basePageData.getCanonical(),
@@ -43,6 +47,7 @@ public class BrandItemPageData extends BasePageData {
         this.pricing = pricing;
         this.rating = rating;
         this.identified = identified;
+        this.naGif = naGif;
     }
 
     public String getHeader1() {
@@ -67,5 +72,9 @@ public class BrandItemPageData extends BasePageData {
 
     public Boolean getIdentified() {
         return identified;
+    }
+
+    public Boolean getNaGif() {
+        return naGif;
     }
 }

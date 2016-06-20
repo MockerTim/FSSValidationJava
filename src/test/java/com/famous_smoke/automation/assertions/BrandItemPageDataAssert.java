@@ -155,5 +155,16 @@ public class BrandItemPageDataAssert extends AbstractAssert<BrandItemPageDataAss
                 .stream()
                 .reduce("", (a, b) -> a + COLLECTION_SEPARATOR + b);
     }
-
+    /**
+     * Checks if the na gif field is true.
+     * @return the current Assert object; this is done
+     * to allow chain assertions.
+     */
+    public BrandItemPageDataAssert isNaGif() {
+        FamousSmokeAssertions
+                .assertThat(actual.getNaGif())
+                .overridingErrorMessage(AssertionMessages.PLACEHOLDER_NA_GIF, actual.getURL())
+                .isTrue();
+        return this;
+    }
 }
