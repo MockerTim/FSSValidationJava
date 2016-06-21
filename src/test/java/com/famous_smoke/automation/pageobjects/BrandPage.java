@@ -144,6 +144,6 @@ public class BrandPage extends BasePage {
      */
     public static boolean isNaGif()
     {
-        return !hasXPATHElement(PageConstants.NA_IMAGE);
+        return hasXPATHElement(PageConstants.NA_IMAGE);
     }
 }
