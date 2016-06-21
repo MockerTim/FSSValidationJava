@@ -72,7 +72,7 @@ public class BrandItemPage extends BasePage {
     public static boolean isIdentified() {
         return hasVideo() || hasImage();
     }
-    public static boolean isNaGif() { return  !hasXPATHElement(PageConstants.NA_IMAGE);}
+    public static boolean isNaGif() { return  hasXPATHElement(PageConstants.NA_IMAGE);}
 
     public static BrandItemPageData getItemData() {
         String header1Text = extractElementText(header1, hasHeader1());
