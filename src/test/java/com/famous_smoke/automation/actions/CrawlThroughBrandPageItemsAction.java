@@ -11,8 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * <p>Crawls through the different Brand links
- * of the BrandListPage.</p>
+ * <p>Crawls through the different Item links
+ * of the Brand Page.</p>
  */
 public class CrawlThroughBrandPageItemsAction {
 

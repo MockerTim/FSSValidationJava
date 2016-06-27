@@ -52,6 +52,7 @@ public class Navigator {
     public static void initializePages() {
         Navigator.initializePage(BrandListPage.class);
         Navigator.initializePage(BrandPage.class);
+        Navigator.initializePage(ReviewPage.class);
         Navigator.initializePage(BrandItemPage.class);
     }
 
