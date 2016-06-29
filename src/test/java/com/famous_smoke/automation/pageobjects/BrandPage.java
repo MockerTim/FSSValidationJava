@@ -63,6 +63,7 @@ public class BrandPage extends BasePage {
      *                  the items list.
      */
     public static void goToItem(final Integer itemIndex) {
+        logger.debug("Go to item by index:" + itemIndex);
         WebElement item = items.get(itemIndex);
         waitUntilElementIsClickable(
                 findElementByCss(item, PageConstants.BRAND_ITEM_LINK_CSS)

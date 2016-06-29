@@ -39,7 +39,6 @@ public final class PageConstants {
     //Added by drew as na.gif validator
     public static final String NA_IMAGE = "//img[contains(@src,'na.gif') and @itemprop='image']";
 
-
     private PageConstants() {
         //not called
     }

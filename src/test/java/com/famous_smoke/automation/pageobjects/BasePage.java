@@ -3,6 +3,7 @@ package com.famous_smoke.automation.pageobjects;
 import com.famous_smoke.automation.data.BasePageData;
 import com.famous_smoke.automation.data.DataFactory;
 import com.famous_smoke.automation.navigation.Navigator;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,6 +20,8 @@ import static com.famous_smoke.automation.util.SeleniumFinder.*;
  * using the framework.</p>
  */
 public class BasePage {
+
+    protected static Logger logger = Logger.getLogger(BasePage.class);
 
     private static final long WAIT_TIME_IN_SECONDS = 30L;
 
@@ -67,6 +70,7 @@ public class BasePage {
      *                        link to click.
      */
     public static void clickBreadcrumb(final Integer breadcrumbIndex){
+        logger.debug("Clicking BreadCrumb by index :"  + breadcrumbIndex);
         waitUntilElementIsClickable(
                 findElementsByCss(breadcrumbs, PageConstants.BREADCRUMBS_LINKS_CSS)
                 .get(breadcrumbIndex)
@@ -77,6 +81,7 @@ public class BasePage {
      * Closes the promotion form.
      */
     public static void closePromo() {
+        logger.debug("Closing promo window");
         waitUntilElementIsClickable(
                 promoCloseLink
         ).click();
@@ -231,7 +236,9 @@ public class BasePage {
     }
 
     protected static WebElement waitUntilElementIsClickable(final WebElement element) {
-        return new WebDriverWait(Navigator.driver, WAIT_TIME_IN_SECONDS).until(ExpectedConditions.elementToBeClickable(element));
+        logger.info("Wait until element is clickable");
+       // return new WebDriverWait(Navigator.driver, WAIT_TIME_IN_SECONDS).until(ExpectedConditions.elementToBeClickable(element));
+        return  null;
     }
 
 }

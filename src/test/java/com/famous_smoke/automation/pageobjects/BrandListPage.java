@@ -40,6 +40,7 @@ public class BrandListPage extends BasePage {
      * @param brandIndex the brand position in the List.
      */
     public static void goToBrand(final Integer brandIndex) {
+        logger.debug("Goes to Brand by index: " + brandIndex);
         if (hasPromo()) {
             closePromo();
         }
