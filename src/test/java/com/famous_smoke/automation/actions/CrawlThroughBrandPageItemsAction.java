@@ -44,13 +44,13 @@ public class CrawlThroughBrandPageItemsAction {
                 String previousURL = Hooks.testUrl;
                 Hooks.testUrl = itemURL;
                 try {
-                    System.out.println("SCRAPPING DATA FROM " + Hooks.testUrl);
+                    logger.info("SCRAPPING DATA FROM " + Hooks.testUrl);
                     itemsData.add(NavigateToBrandItemPageAction.execute());
                     Navigator.goBack();
                 } catch (Exception ex) {
                     String message = "FAILED TO SCRAP DATA FROM " + Hooks.testUrl + "\n"
                                    + "EXCEPTION MESSAGE IS: " + ex.getMessage();
-                    System.err.println(message);
+                    logger.error(message);
                     Hooks.testUrl = previousURL;
                     NavigateToTestUrlAction.execute();
                 }
