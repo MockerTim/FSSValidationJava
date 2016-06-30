@@ -47,6 +47,8 @@ public class ScrapBrandItemsDataFromBrandListPageAction {
             } catch (Exception ex) {
                 String message = "FAILED TO SCRAP DATA FROM " + Hooks.testUrl + "\n"
                                + "EXCEPTION MESSAGE IS: " + ex.getMessage();
+                //recommend you to replace next line on logger
+                //Are you agree?
                 System.err.println(message);
             }
             if (++crawl == Hooks.testMaximumCrawls) {

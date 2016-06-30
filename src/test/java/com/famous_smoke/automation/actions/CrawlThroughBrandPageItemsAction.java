@@ -6,6 +6,7 @@ import com.famous_smoke.automation.navigation.Navigator;
 import com.famous_smoke.automation.pageobjects.BrandItemPage;
 import com.famous_smoke.automation.pageobjects.BrandPage;
 import com.famous_smoke.automation.validators.UrlValidators;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.List;
  */
 public class CrawlThroughBrandPageItemsAction {
 
+    private static final Logger logger = Logger.getLogger(CrawlThroughBrandPageItemsAction.class);
     /**
      * Goes through the Brand Items list of the
      * Brand page, one link at a time.
@@ -33,6 +35,7 @@ public class CrawlThroughBrandPageItemsAction {
      * @throws Throwable
      */
     public static List<BrandItemPageData> execute() throws Throwable {
+        logger.debug("Crawls through the different Brand links of the BrandListPage");
         List<BrandItemPageData> itemsData = new ArrayList<>();
         String url = BrandPage.getBrandData().getURL();
         if (UrlValidators.isBrandPage(url)) {
