@@ -31,12 +31,12 @@ public class Navigator {
     public static void goUrl(final String url) {
         logger.debug("Driver run page by url: " + url);
         driver.get(url);
-        try {
-			Thread.sleep(20000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+       /** try {
+	*		Thread.sleep(20000);
+	*	} catch (InterruptedException e) {
+	*		// TODO Auto-generated catch block
+	*		e.printStackTrace();
+	*/	}
     }
 
     /**
