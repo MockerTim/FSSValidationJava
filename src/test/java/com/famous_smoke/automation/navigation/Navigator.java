@@ -4,7 +4,7 @@ import com.famous_smoke.automation.pageobjects.BasePage;
 import com.famous_smoke.automation.pageobjects.BrandItemPage;
 import com.famous_smoke.automation.pageobjects.BrandPage;
 import com.famous_smoke.automation.pageobjects.BrandListPage;
-
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -13,7 +13,7 @@ import org.openqa.selenium.support.PageFactory;
  * to the Selenium WebDriver.</p>
  */
 public class Navigator {
-
+private static final Logger logger = Logger.getLogger(Navigator.class);
     /**
      * The WebDriver that is instantiated in each
      * test run.
@@ -26,6 +26,7 @@ public class Navigator {
      *            we are going to get.
      */
     public static void goUrl(final String url) {
+        logger.debug("Driver run page by url: " + url);
         driver.get(url);
     }
 
@@ -34,6 +35,7 @@ public class Navigator {
      * previous page.
      */
     public static void goBack(){
+        logger.debug("Driver navigates back");
         driver.navigate().back();
     }
 
@@ -63,6 +65,7 @@ public class Navigator {
      * current WebDriver.
      */
     public static void closeNavigator() {
+        logger.debug("Closing driver ...");
         driver.quit();
         driver = null;
     }
@@ -74,6 +77,7 @@ public class Navigator {
      * @param page the BasePage class.
      */
     private static void initializePage(final Class<? extends BasePage> page){
+        logger.debug("Initialize page by name: "  + page.getName());
         PageFactory.initElements(driver, page);
     }
 
