@@ -48,6 +48,7 @@ private static final Logger logger = Logger.getLogger(Navigator.class);
     public static void initializePages() {
         Navigator.initializePage(BrandListPage.class);
         Navigator.initializePage(BrandPage.class);
+        Navigator.initializePage(ReviewPage.class);
         Navigator.initializePage(BrandItemPage.class);
     }
 

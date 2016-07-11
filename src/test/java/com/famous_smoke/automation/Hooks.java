@@ -46,6 +46,7 @@ public class Hooks {
     public static final Map<String, BrandPageData>     TEST_BRAND_DATA_MAP = createTestBrandDataMap();
     public static final Map<String, BrandItemPageData> TEST_ITEM_DATA_MAP  = createTestBrandItemDataMap();
     public static final Map<String, BasePageData>      TEST_BASE_DATA_MAP  = createTestBaseDataMap();
+    public static final Map<String, ReviewPageData>    TEST_REVIEW_DATA_MAP  = createTestReviewDataMap();
 
     /**
      * The starting URL of each test.
@@ -86,6 +87,16 @@ public class Hooks {
 
     public static BrandItemPageData testBrandItemPageData;
     public static BrandItemPageData extractedBrandItemPageData;
+
+    /**
+     * All the ReviewPage objects that are fetched by tests
+     * that need to collect data from multiple urls.
+     */
+    public static Collection<BrandItemPageData> testReviewPageData;
+
+    public static BrandItemPageData testReviewPageData;
+    public static BrandItemPageData extractedReviewPageData;
+
     /**
      * This variable is for the check to see if the features
      * templates need to be processed.
@@ -102,6 +113,7 @@ public class Hooks {
             ArrayList<BasePageData> data = new ArrayList<>();
             data.addAll(DataWorkbook.getTestDataWorkbook().readBrandPages());
             data.addAll(DataWorkbook.getTestDataWorkbook().readBrandItemPages());
+            data.addAll(DataWorkbook.getTestDataWorkbook().readReviewPages());
             return data;
         } catch (IOException ex) {
             throw new RuntimeException(ex);
@@ -188,6 +200,9 @@ public class Hooks {
      * @throws RuntimeException if anything goes wrong
      * with the IO.
      */
+
+
+
     private static Map<String, BrandPageData> createTestBrandDataMap() {
         try {
             Collection<BrandPageData> brands = DataWorkbook.getTestDataWorkbook().readBrandPages();
@@ -216,6 +231,16 @@ public class Hooks {
         return map;
     }
 
+    private static Map<String, ReviewPageData> createReviewDataMap() {
+        try {
+            Collection<ReviewPageData> reviews = DataWorkbook.getTestDataWorkbook().readReviewPages();
+            ConcurrentHashMap<String, ReviewPageData> map = new ConcurrentHashMap<>();
+            brands.stream().forEach(review -> map.putIfAbsent(review.getURL(), review));
+            return map;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
     /**
      * This method evaluates the class of the current
      * Webdriver to determine if it can be used to
