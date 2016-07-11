@@ -1,0 +1,1 @@
+copy /y c:\automation\brands\data\TestData.xlsx ..\..\src\test\resources\data\TestData.xlsx
