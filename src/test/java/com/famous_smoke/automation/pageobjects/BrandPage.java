@@ -63,6 +63,7 @@ public class BrandPage extends BasePage {
      *                  the items list.
      */
     public static void goToItem(final Integer itemIndex) {
+        logger.debug("Go to item by index:" + itemIndex);
         WebElement item = items.get(itemIndex);
         waitUntilElementIsClickable(
                 findElementByCss(item, PageConstants.BRAND_ITEM_LINK_CSS)
@@ -87,7 +88,7 @@ public class BrandPage extends BasePage {
     public static BrandPageData getBrandData() {
         String header1Text = extractElementText(header1, hasHeader1());
         String descriptionText = extractElementText(description, hasDescription());
-        return DataFactory.createBrandPage(getBasePageData(), header1Text, descriptionText, isIdentified());
+        return DataFactory.createBrandPage(getBasePageData(), header1Text, descriptionText, isIdentified(), isNaGif());
     }
 
     /**
@@ -134,5 +135,16 @@ public class BrandPage extends BasePage {
      */
     public static boolean isIdentified() {
         return hasLogo() || hasVideo();
+    }
+
+    /**
+     * Evaluates if the page is identified either
+     * by a Placeholder
+     * @return true if the BrandPage Placeholder
+     * Video.
+     */
+    public static boolean isNaGif()
+    {
+        return hasXPATHElement(PageConstants.NA_IMAGE);
     }
 }

@@ -92,6 +92,7 @@ public final class DataWorkbook {
     private static final int BRAND_BREADCRUMBS_TEXT_COLUMN  = 6;
     private static final int BRAND_BREADCRUMBS_LINKS_COLUMN = 7;
     private static final int BRAND_IDENTIFIED_COLUMN        = 8;
+    private static final int BRAND_NAGIF_COLUMN        = 9;
 
     private static final int ITEM_URL_COLUMN               = 0;
     private static final int ITEM_CANONICAL_COLUMN         = 1;
@@ -105,6 +106,7 @@ public final class DataWorkbook {
     private static final int ITEM_PRICING_COLUMN           = 9;
     private static final int ITEM_RATING_COLUMN            = 10;
     private static final int ITEM_IDENTIFIED_COLUMN        = 11;
+    private static final int ITEM_NAGIF_COLUMN        = 12;
 
     /**
      * The location of the XLSX File.
@@ -236,6 +238,7 @@ public final class DataWorkbook {
             String breadcrumbsText = getCellValue(dataRow, BRAND_BREADCRUMBS_TEXT_COLUMN);
             String breadcrumbsLinks = getCellValue(dataRow, BRAND_BREADCRUMBS_LINKS_COLUMN);
             String identified = getCellValue(dataRow, BRAND_IDENTIFIED_COLUMN);
+            String naGif = getCellValue(dataRow, BRAND_NAGIF_COLUMN);
 
             brands.add(DataFactory.createBrandPage(
                     DataFactory.createBasePage(
@@ -245,7 +248,8 @@ public final class DataWorkbook {
                     ),
                     header1,
                     description,
-                    Boolean.valueOf(identified)));
+                    Boolean.valueOf(identified),
+                    Boolean.valueOf(naGif)));
         }
         return brands;
     }
@@ -271,6 +275,7 @@ public final class DataWorkbook {
             String specs = getCellValue(dataRow, ITEM_SPECS_COLUMN);
             String pricing = getCellValue(dataRow, ITEM_PRICING_COLUMN);
             String rating = getCellValue(dataRow, ITEM_RATING_COLUMN);
+            String naGif = getCellValue(dataRow, ITEM_NAGIF_COLUMN);
 
             items.add(DataFactory.createBrandItemPage(
                     DataFactory.createBasePage(
@@ -283,7 +288,8 @@ public final class DataWorkbook {
                     Arrays.asList(specs.split(COLLECTION_SEPARATOR)),
                     pricing,
                     rating,
-                    Boolean.valueOf(identified)));
+                    Boolean.valueOf(identified),
+                    Boolean.valueOf(naGif)));
         }
         return items;
     }

@@ -23,10 +23,13 @@ public class ThenSteps {
         assertThat(Hooks.testBrandItemPageData).isIdentified();
     }
 
-    //Added by drew.com as na.gif validator
-    @Then("^the page should not have any na.gif image$")
-    public void the_page_does_not_have_any_na_gif_image() throws Throwable {
-        assertThat(BrandItemPage.hasNaImage()).isFalse();
+    @Then("^the brand page should not be a placeholder image url ending in na.gif$")
+    public void the_brand_page_does_not_have_any_na_gif_image() throws Throwable {
+        assertThat(Hooks.testBrandPageData).isNaGif();
     }
 
+    @Then("^the item page should not be a placeholder image url ending in na.gif$")
+    public void the_item_page_does_not_have_any_na_gif_image() throws Throwable {
+        assertThat(Hooks.testBrandItemPageData).isIdentified();
+    }
 }

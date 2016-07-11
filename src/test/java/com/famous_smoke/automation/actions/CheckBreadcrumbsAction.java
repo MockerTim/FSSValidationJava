@@ -2,10 +2,9 @@ package com.famous_smoke.automation.actions;
 
 
 import com.famous_smoke.automation.data.BasePageData;
-import com.famous_smoke.automation.data.BrandPageData;
 import com.famous_smoke.automation.navigation.Navigator;
 import com.famous_smoke.automation.pageobjects.BasePage;
-import com.famous_smoke.automation.pageobjects.BrandPage;
+import org.apache.log4j.Logger;
 
 import static com.famous_smoke.automation.validators.SourceValidators.isInternalError;
 import static com.famous_smoke.automation.validators.SourceValidators.isNotFound;
@@ -16,6 +15,7 @@ import static com.famous_smoke.automation.validators.SourceValidators.isNotFound
  */
 public class CheckBreadcrumbsAction {
 
+    private static final Logger logger = Logger.getLogger(CheckBreadcrumbsAction.class);
     /**
      * We click on all the breadcrumbs of a
      * Brand page to check if they are valid.
@@ -30,6 +30,7 @@ public class CheckBreadcrumbsAction {
      * @throws Throwable
      */
     public static BasePageData execute() throws Throwable {
+        logger.debug("Navigates to the Diferrent breadcrumbs of a BrandPage");
         int breadcrumbs = BasePage.getBreadcrumbsCount();
         for (int i = 0; i < breadcrumbs; ++i) {
             if (BasePage.hasPromo()) {

@@ -17,11 +17,13 @@ public class BrandPageData extends BasePageData {
     private final String header1;
     private final String description;
     private final Boolean identified;
+    private final Boolean naGif;
 
     public BrandPageData(final BasePageData basePageData,
                          final String header1,
                          final String description,
-                         final Boolean identified) {
+                         final Boolean identified,
+                         final Boolean naGif) {
         super(
                 basePageData.getURL(),
                 basePageData.getCanonical(),
@@ -33,6 +35,7 @@ public class BrandPageData extends BasePageData {
         this.header1 = header1;
         this.description = description;
         this.identified = identified;
+        this.naGif = naGif;
     }
 
     public String getHeader1() {
@@ -47,4 +50,7 @@ public class BrandPageData extends BasePageData {
         return identified;
     }
 
+    public Boolean getNaGif() {
+        return naGif;
+    }
 }

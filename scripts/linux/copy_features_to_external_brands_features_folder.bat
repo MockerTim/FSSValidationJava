@@ -1,0 +1,1 @@
+copy /y ..\..\src\test\resources\features\processed\*.feature c:\automation\brands\features-processed

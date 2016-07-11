@@ -6,6 +6,7 @@ import com.famous_smoke.automation.data.BrandPageData;
 import com.famous_smoke.automation.navigation.Navigator;
 import com.famous_smoke.automation.pageobjects.BrandListPage;
 import com.famous_smoke.automation.pageobjects.BrandPage;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.List;
  */
 public class ScrapBrandsDataFromBrandListPageAction {
 
+    private static final Logger logger = Logger.getLogger(ScrapBrandsDataFromBrandListPageAction.class);
     /**
      * Goes through the BrandLinks list of the
      * categories page, one link at a time.
@@ -44,12 +46,12 @@ public class ScrapBrandsDataFromBrandListPageAction {
         for (String brandLink : Hooks.testBrandListPageData.getBrandLinks()) {
             try {
                 Hooks.testUrl = brandLink;
-                System.out.println("SCRAPPING DATA FROM " + Hooks.testUrl);
+                logger.info("SCRAPPING DATA FROM " + Hooks.testUrl);
                 brandsData.add(NavigateToBrandPageAction.execute());
             } catch (Exception ex) {
                 String message = "FAILED TO SCRAP DATA FROM " + Hooks.testUrl + "\n"
                                + "EXCEPTION MESSAGE IS: " + ex.getMessage();
-                System.err.println(message);
+                logger.error(message);
             }
             if (++crawl == Hooks.testMaximumCrawls) {
                 break;

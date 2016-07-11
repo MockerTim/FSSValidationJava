@@ -1,6 +1,7 @@
 package com.famous_smoke.automation.navigation;
 
 import com.famous_smoke.automation.util.TestConfigReader;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -19,6 +20,8 @@ import java.net.URL;
  * <p>An implementation of the Factory pattern.</p>
  */
 public final class WebDriverFactory {
+
+    private static Logger logger = Logger.getLogger(WebDriverFactory.class);
 
     private WebDriverFactory() {
         // not called
@@ -114,6 +117,12 @@ public final class WebDriverFactory {
      * @return the Remote WebDriver.
      */
     private static WebDriver createRemoteDriver(final DesiredCapabilities capabilities) {
+        logger.debug("Starting Remote Driver by Url: " +"http://"
+                + TestConfigReader.getSeleniumServerHost()
+                + ":"
+                + TestConfigReader.getSeleniumServerPort()
+                + "/wd/hub" );
+
         URL seleniumServerUrl = null;
         try {
              seleniumServerUrl = new URL("http://"

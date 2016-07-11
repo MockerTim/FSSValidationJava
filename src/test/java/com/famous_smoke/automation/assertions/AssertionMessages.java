@@ -24,7 +24,7 @@ public class AssertionMessages {
     public static final String FIELD_NOT_MATCHING   = "The field %s in the URL %s doesn't match the scrapped value.\n"
                                                     + "Current value is: %s.\n"
                                                     + "Expected values is: %s.";
-    public static final String PLACEHOLDER_NA_GIF   = "The PlaceHolder Is na.gif container";
+    public static final String PLACEHOLDER_NA_GIF   = "The PlaceHolder for %s is a na.gif container";
 
     private AssertionMessages() {
         //not called

@@ -1,11 +1,6 @@
 @seo1
 @brands
-<<<<<<< HEAD
-Feature: The Brand Group Pages have a SEO paragraph matching the extracted Data
-=======
 Feature: The Brand Group Pages have a SEO Paragraph matching the extracted Data
->>>>>>> origin/master
-
   Scenario Outline: I will validate the Brand Group SEO Paragraph
     Given I want to the check the content of the brand url "<URL>"
     And the url is from a brand group page

@@ -1,14 +1,11 @@
 package com.famous_smoke.automation.pageobjects;
 
-import com.famous_smoke.automation.data.BasePageData;
 import com.famous_smoke.automation.data.BrandItemPageData;
-import com.famous_smoke.automation.data.BrandPageData;
 import com.famous_smoke.automation.data.DataFactory;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -73,10 +70,7 @@ public class BrandItemPage extends BasePage {
         return hasVideo() || hasImage();
     }
 
-    //Added by drew as na.gif validator
-    public static boolean hasNaImage() {
-        return hasXPATHElement(PageConstants.NA_IMAGE);
-    }
+    public static boolean isNaGif() { return  hasXPATHElement(PageConstants.NA_IMAGE);}
 
     public static BrandItemPageData getItemData() {
         String header1Text = extractElementText(header1, hasHeader1());
@@ -100,7 +94,8 @@ public class BrandItemPage extends BasePage {
                 specsTexts,
                 pricingText,
                 ratingText,
-                isIdentified()
+                isIdentified(),
+                isNaGif()
         );
     }
 
