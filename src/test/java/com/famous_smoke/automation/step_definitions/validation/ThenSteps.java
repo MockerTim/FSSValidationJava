@@ -22,7 +22,6 @@ public class ThenSteps {
     public void the_item_identification_should_be_visible() throws Throwable {
         assertThat(Hooks.testBrandItemPageData).isIdentified();
     }
-//added by drew on june 20
 
     @Then("^the brand page should not be a placeholder image url ending in na.gif$")
     public void the_brand_page_does_not_have_any_na_gif_image() throws Throwable {

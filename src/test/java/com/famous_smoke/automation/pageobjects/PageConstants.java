@@ -36,7 +36,7 @@ public final class PageConstants {
 
     public static final String PAGE_HEADER_CSS       = ".pagebar";
 
-    //Added by drew as na.gif validator on june 20
+    //Added by drew as na.gif validator
     public static final String NA_IMAGE = "//img[contains(@src,'na.gif') and @itemprop='image']";
 
     private PageConstants() {
