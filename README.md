@@ -16,9 +16,32 @@ Our features are dynamically generated from a group of templates after scrapping
 
 Hence the setup feature which performs the data extraction and creates the features from the templates.
 
+#Running it locally
+Pre-condition: 
+
+1. Brands
+--Setup
+- Run scripts\jenkins\pre_steps_setup_htmlunit.bat
+- Run mvn clean test site -Dcucumber.options="--tags @setup --tags @brands"
+- Run scripts\jenkins\post_steps_setup_brands.bat
+--Seo1
+- Run scripts\jenkins\pre_steps_brands_htmlunit.bat
+- Run mvn clean test site -Dcucumber.options="--tags @brands --tags @seo1"
+--Seo2
+- Run scripts\jenkins\pre_steps_brands_htmlunit.bat
+- Run mvn clean test site -Dcucumber.options="--tags @brands --tags @seo2"
+--validation
+- Run scripts\jenkins\pre_steps_brands_htmlunit.bat
+- Run mvn clean test site -Dcucumber.options="--tags @brands --tags @validation"
+--validation
+- Run scripts\jenkins\pre_steps_brands_htmlunit.bat
+- Run mvn clean test site -Dcucumber.options="--tags @brands --tags @actionvalidation"
+- 
+...............so on.
+
 #What do these tests in jenkins do?
 
-Bash scripts contained in src/linux need to be added to the Jenkins job in prebuild and postbuild steps. These scripts are named accordingly.
+Bash scripts (as the .bat files) contained in src/linux need to be added to the Jenkins job in prebuild and postbuild steps. These scripts are named accordingly.
 
 <br>
 
