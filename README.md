@@ -36,7 +36,6 @@ Pre-condition:
 --validation
 - Run scripts\jenkins\pre_steps_brands_htmlunit.bat
 - Run mvn clean test site -Dcucumber.options="--tags @brands --tags @actionvalidation"
-- 
 ...............so on.
 
 #What do these tests in jenkins do?
