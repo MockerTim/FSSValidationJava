@@ -38,6 +38,8 @@ Pre-condition:
 - Run mvn clean test site -Dcucumber.options="--tags @brands --tags @actionvalidation"
 ...............so on.
 
+You then run the program by running "jenkins-localchrome.bat"  in the project home directory.
+
 #What do these tests in jenkins do?
 
 Bash scripts (as the .bat files) contained in scripts\linux need to be added to the Jenkins job in prebuild and postbuild steps. These scripts are named accordingly.
