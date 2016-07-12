@@ -5,7 +5,22 @@ Page Object Framework using cucumber jvm (java) and Selenium java.<br><br><br>
 
 http://morty.fam***-*****.com:8585<br><br><br>
 
+#Maven
+The cucumber setup for ITEM PAGES - uses maven rules such as:   clean test site -Dcucumber.options="--tags @setup --tags @items" s and brand page would be the same, except @brands.  the SETUP is what generates our spreadsheet and no subsequential jobs can run unless the SETUP runs as well.
+
+#Execution
+All the page objects work as static elements. We have an 'opinionated' execution. In other words, we know exactly what type of page we are every moment of the execution.
+
+#Cucumber
+Our features are dynamically generated from a group of templates after scrapping some data from the web , particularly, the URL to which we are going to perform the validations. 
+
+Hence the setup feature which performs the data extraction and creates the features from the templates.
+
 #What do these tests in jenkins do?
+
+Bash scripts contained in src/linux need to be added to the Jenkins job in prebuild and postbuild steps. These scripts are named accordingly.
+
+<br>
 
 Brand_Setup - Generates information from website brand pages and extracts it to xlsx spreadsheet <br>
 Item_Setup - Generates information from website brand and item pages and extracts to xlsx spreadsheet. <br><br>
