@@ -41,7 +41,7 @@ Pre-condition:
 
 #What do these tests in jenkins do?
 
-Bash scripts (as the .bat files) contained in src/linux need to be added to the Jenkins job in prebuild and postbuild steps. These scripts are named accordingly.
+Bash scripts (as the .bat files) contained in scripts\linux need to be added to the Jenkins job in prebuild and postbuild steps. These scripts are named accordingly.
 
 <br>
 
