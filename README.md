@@ -52,7 +52,7 @@ You will want to verify:
 :exists in navigation\WebDriverFactory.java, and the /properties/Testconfig.properties is using LOCAL_CHROME as the SELENIUM_DRIVER
 #What do these tests in jenkins do?
 
-Bash scripts (as the .bat files) contained in scripts\linux need to be added to the Jenkins job in prebuild and postbuild steps. These scripts are named accordingly.
+Bash scripts (similar to the .bat files) contained in scripts\linux need to be added to the Jenkins job in prebuild and postbuild steps. These scripts are named accordingly.
 
 <br>
 
