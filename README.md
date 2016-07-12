@@ -12,7 +12,7 @@ The cucumber setup for ITEM PAGES - uses maven rules such as:   clean test site 
 All the page objects work as static elements. We have an 'opinionated' execution. In other words, we know exactly what type of page we are every moment of the execution.
 
 #Cucumber
-Our features are dynamically generated from a group of templates after scrapping some data from the web , particularly, the URL to which we are going to perform the validations. 
+Our features are dynamically generated from a group of templates after scrapping some data from the web , particularly, the URL to which we are going to perform the validations. The links contained in the bottom of this README are the templates, which are the "cucumber test cases"
 
 Hence the setup feature which performs the data extraction and creates the features from the templates.
 
