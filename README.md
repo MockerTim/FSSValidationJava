@@ -38,8 +38,18 @@ Pre-condition:
 - Run mvn clean test site -Dcucumber.options="--tags @brands --tags @actionvalidation"
 ...............so on.
 
-You then run the program by running "jenkins-localchrome.bat"  in the project home directory.
+You then run the program by running "jenkins-localchrome.bat"  in the project home directory.  Or, with intelliJ with the proper Maven rules configured.  
 
+You will want to verify: 
+
+  private static WebDriver createLocalChromeDriver() {
+        System.setProperty(
+                "webdriver.chrome.driver",
+                "C:\\chromedriver.exe");
+        return new ChromeDriver();
+    }
+    
+:exists in navigation\WebDriverFactory.java, and the /properties/Testconfig.properties is using LOCAL_CHROME as the SELENIUM_DRIVER
 #What do these tests in jenkins do?
 
 Bash scripts (as the .bat files) contained in scripts\linux need to be added to the Jenkins job in prebuild and postbuild steps. These scripts are named accordingly.
