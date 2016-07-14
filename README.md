@@ -6,13 +6,15 @@ Page Object Framework using cucumber jvm (java) and Selenium java.<br><br><br>
 http://morty.fam***-*****.com:8585<br><br><br>
 
 #Maven
+https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html
 The cucumber setup for ITEM PAGES - uses maven rules such as:   clean test site -Dcucumber.options="--tags @setup --tags @items" s and brand page would be the same, except @brands.  the SETUP is what generates our spreadsheet and no subsequential jobs can run unless the SETUP runs as well.
 
 #Execution
 All the page objects work as static elements. We have an 'opinionated' execution. In other words, we know exactly what type of page we are every moment of the execution.
 
 #Cucumber
-Our features are dynamically generated from a group of templates after scrapping some data from the web , particularly, the URL to which we are going to perform the validations. 
+https://blog.engineyard.com/2009/cucumber-introduction
+Our features are dynamically generated from a group of templates after scrapping some data from the web , particularly, the URL to which we are going to perform the validations. The links contained in the bottom of this README are the templates, which are the "cucumber test cases"
 
 Hence the setup feature which performs the data extraction and creates the features from the templates.
 
@@ -38,9 +40,21 @@ Pre-condition:
 - Run mvn clean test site -Dcucumber.options="--tags @brands --tags @actionvalidation"
 ...............so on.
 
+You then run the program by running "jenkins-localchrome.bat"  in the project home directory.  Or, with intelliJ with the proper Maven rules configured.  
+
+You will want to verify: 
+
+  private static WebDriver createLocalChromeDriver() {
+        System.setProperty(
+                "webdriver.chrome.driver",
+                "C:\\chromedriver.exe");
+        return new ChromeDriver();
+    }
+    
+:exists in navigation\WebDriverFactory.java, and the /properties/Testconfig.properties is using LOCAL_CHROME as the SELENIUM_DRIVER
 #What do these tests in jenkins do?
 
-Bash scripts (as the .bat files) contained in scripts\linux need to be added to the Jenkins job in prebuild and postbuild steps. These scripts are named accordingly.
+Bash scripts (similar to the .bat files) contained in scripts\linux need to be added to the Jenkins job in prebuild and postbuild steps. These scripts are named accordingly.
 
 <br>
 
