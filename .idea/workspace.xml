@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6efea183-2e16-4037-b896-b08ce7e21b26" name="Default" comment="">
+    <list default="true" id="6efea183-2e16-4037-b896-b08ce7e21b26" name="Default" comment="attempting to run test on shawn's working copy with new class name">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandItemsPagesData.feature" afterPath="$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandItemsPagesData.feature" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandPagesData.feature" afterPath="$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandPagesData.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/BrandPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/BrandPage.java" />
     </list>
     <ignored path="FSSValidation-Java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/PageConstants.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="66" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="66" />
+              <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -78,12 +77,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BrandPage.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BrandPage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/BrandPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="62" column="39" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
-              <folding />
+            <state vertical-scroll-proportion="0.3327869">
+              <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+              <folding>
+                <element signature="e#3377#3378#0" expanded="true" />
+                <element signature="e#3450#3451#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,7 +95,23 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1932#1933#0" expanded="false" />
+                <element signature="e#1962#1963#0" expanded="false" />
+                <element signature="e#2000#2001#0" expanded="false" />
+                <element signature="e#2034#2035#0" expanded="false" />
+                <element signature="e#2078#2079#0" expanded="false" />
+                <element signature="e#2106#2107#0" expanded="false" />
+                <element signature="e#2140#2141#0" expanded="false" />
+                <element signature="e#2170#2171#0" expanded="false" />
+                <element signature="e#2203#2204#0" expanded="false" />
+                <element signature="e#2232#2233#0" expanded="false" />
+                <element signature="e#2270#2271#0" expanded="false" />
+                <element signature="e#2303#2304#0" expanded="false" />
+                <element signature="e#2336#2337#0" expanded="false" />
+                <element signature="e#2364#2365#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,10 +142,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExtractBrandPagesData.feature" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ExtractBrandPagesData.feature" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandPagesData.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2117061">
+            <state vertical-scroll-proportion="0.0">
               <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
               <folding />
             </state>
@@ -166,11 +184,11 @@
         <option value="$PROJECT_DIR$/target/test-classes/properties/TestConfig.properties" />
         <option value="$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/navigation/WebDriverFactory.java" />
         <option value="$PROJECT_DIR$/src/test/resources/properties/TestConfig-LocalHtmlUnit.properties" />
-        <option value="$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/BrandPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/util/FeaturesProcessor.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/PageConstants.java" />
         <option value="$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandItemsPagesData.feature" />
         <option value="$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandPagesData.feature" />
+        <option value="$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/BrandPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/PageConstants.java" />
       </list>
     </option>
   </component>
@@ -1579,7 +1597,7 @@
       <workItem from="1468436181675" duration="3063000" />
       <workItem from="1468443269147" duration="5518000" />
       <workItem from="1468505664619" duration="8268000" />
-      <workItem from="1468518990727" duration="4880000" />
+      <workItem from="1468518990727" duration="6822000" />
     </task>
     <task id="LOCAL-00001" summary="Added step for na gif verification">
       <created>1466102995454</created>
@@ -1659,11 +1677,29 @@
       <option name="project" value="LOCAL" />
       <updated>1468523908757</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="attempting to run test on shawn's working copy with new class name">
+      <created>1468525689144</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1468525689144</updated>
+    </task>
+    <task id="LOCAL-00015" summary="attempting to run test on shawn's working copy with new class name">
+      <created>1468526677862</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1468526677862</updated>
+    </task>
+    <task id="LOCAL-00016" summary="attempting to run test on shawn's working copy with new class name">
+      <created>1468527521072</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1468527521072</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67241000" />
+    <option name="totallyTimeSpent" value="69183000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1924" y="-4" width="1928" height="1042" extended-state="6" />
@@ -1671,17 +1707,17 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32804233" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32769555" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12367865" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12367865" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40803382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24895833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37671956" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37632135" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1711,7 +1747,8 @@
     <MESSAGE value="trying to grab seo paragraph from brandgroup and brand pages with new class xpath.  --this may not work" />
     <MESSAGE value="adding to bitcoin generator" />
     <MESSAGE value="adding to bitcoin generator, 16 becomes 18" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding to bitcoin generator, 16 becomes 18" />
+    <MESSAGE value="attempting to run test on shawn's working copy with new class name" />
+    <option name="LAST_COMMIT_MESSAGE" value="attempting to run test on shawn's working copy with new class name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2039,7 +2076,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1932#1933#0" expanded="false" />
+            <element signature="e#1962#1963#0" expanded="false" />
+            <element signature="e#2000#2001#0" expanded="false" />
+            <element signature="e#2034#2035#0" expanded="false" />
+            <element signature="e#2078#2079#0" expanded="false" />
+            <element signature="e#2106#2107#0" expanded="false" />
+            <element signature="e#2140#2141#0" expanded="false" />
+            <element signature="e#2170#2171#0" expanded="false" />
+            <element signature="e#2203#2204#0" expanded="false" />
+            <element signature="e#2232#2233#0" expanded="false" />
+            <element signature="e#2270#2271#0" expanded="false" />
+            <element signature="e#2303#2304#0" expanded="false" />
+            <element signature="e#2336#2337#0" expanded="false" />
+            <element signature="e#2364#2365#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2089,22 +2142,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/PageConstants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="66" selection-start-line="36" selection-start-column="66" selection-end-line="36" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/BrandPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="62" column="39" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandItemsPagesData.feature">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2115,9 +2152,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandPagesData.feature">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2117061">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/PageConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/BrandPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3327869">
+          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+          <folding>
+            <element signature="e#3377#3378#0" expanded="true" />
+            <element signature="e#3450#3451#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
