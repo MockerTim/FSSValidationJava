@@ -61,9 +61,7 @@ public final class WebDriverFactory {
      * in our PATH environment for this to work.
      * @return the Chrome WebDriver.
      */
-    private static WebDriver createLocalChromeDriver() {
-        return new ChromeDriver();
-    }
+    private static WebDriver createLocalChromeDriver() { System.setProperty( "webdriver.chrome.driver", "C:\\chromedriver.exe"); return new ChromeDriver(); }
 
     /**
      * Creates a Firefox WebDriver using Selenium
