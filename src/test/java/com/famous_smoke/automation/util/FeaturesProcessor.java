@@ -247,7 +247,7 @@ public class FeaturesProcessor {
                 BigInteger.ZERO,
                 new BigInteger("7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF", 18),
                 new SecureRandom()
-        ).toString(16);
+        ).toString(18);
     }
 
     /**
