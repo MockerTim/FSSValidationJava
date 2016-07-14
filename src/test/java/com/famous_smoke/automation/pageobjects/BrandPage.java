@@ -27,7 +27,7 @@ public class BrandPage extends BasePage {
     /**
      * The Description/SEO Paragraph.
      */
-    @FindBy(css = PageConstants.BRAND_DESCRIPTION_CSS)
+    @FindBy(css = PageConstants.BRAND_DESCRIPTION_XPATH)
     private static WebElement description;
     /**
      * The Brand Logo.
@@ -106,7 +106,7 @@ public class BrandPage extends BasePage {
      * with the CSS of the description.
      */
     public static boolean hasDescription() {
-        return hasCSSElement(PageConstants.BRAND_DESCRIPTION_CSS);
+        return hasCSSElement(PageConstants.BRAND_DESCRIPTION_XPATH);
     }
 
     /**
