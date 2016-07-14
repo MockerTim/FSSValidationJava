@@ -17,7 +17,7 @@ public final class PageConstants {
     public static final String BREADCRUMBS_LINKS_CSS = ".link";
     public static final String CANONICAL_XPATH       = "//link[@rel='canonical']";
     public static final String BRAND_HEADER1_CSS     = ".title.oswald";
-    public static final String BRAND_DESCRIPTION_CSS = ".pagecopy";
+    public static final String BRAND_DESCRIPTION_XPATH = "//div[contains(@class, 'p-copy')";
     public static final String BRAND_LOGO_CSS        = ".full.nopad";
     public static final String BRAND_VIDEO_CSS       = ".minivideo";
     public static final String BRAND_ITEM_BOX_CSS    = ".infobox";
