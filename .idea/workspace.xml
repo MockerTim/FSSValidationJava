@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6efea183-2e16-4037-b896-b08ce7e21b26" name="Default" comment="attempting to run test on shawn's working copy with new class name">
+    <list default="true" id="6efea183-2e16-4037-b896-b08ce7e21b26" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/BrandPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/BrandPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandItemsPagesData.feature" afterPath="$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandItemsPagesData.feature" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandPagesData.feature" afterPath="$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandPagesData.feature" />
     </list>
     <ignored path="FSSValidation-Java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,16 +28,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.5">
-              <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="PageBreadcrumbs.template" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/resources/features-templates/base/PageBreadcrumbs.template">
           <provider selected="true" editor-type-id="text-editor">
@@ -77,10 +68,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BrandPage.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BrandPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/BrandPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3327869">
+            <state vertical-scroll-proportion="0.0">
               <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
               <folding>
                 <element signature="e#3377#3378#0" expanded="true" />
@@ -90,44 +81,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BrandItemPageData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/data/BrandItemPageData.java">
+      <file leaf-file-name="CrawlThroughBrandPageItemsAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/actions/CrawlThroughBrandPageItemsAction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1932#1933#0" expanded="false" />
-                <element signature="e#1962#1963#0" expanded="false" />
-                <element signature="e#2000#2001#0" expanded="false" />
-                <element signature="e#2034#2035#0" expanded="false" />
-                <element signature="e#2078#2079#0" expanded="false" />
-                <element signature="e#2106#2107#0" expanded="false" />
-                <element signature="e#2140#2141#0" expanded="false" />
-                <element signature="e#2170#2171#0" expanded="false" />
-                <element signature="e#2203#2204#0" expanded="false" />
-                <element signature="e#2232#2233#0" expanded="false" />
-                <element signature="e#2270#2271#0" expanded="false" />
-                <element signature="e#2303#2304#0" expanded="false" />
-                <element signature="e#2336#2337#0" expanded="false" />
-                <element signature="e#2364#2365#0" expanded="false" />
-              </folding>
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WebDriverFactory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/navigation/WebDriverFactory.java">
+      <file leaf-file-name="NavigateToBrandItemPageAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/actions/NavigateToBrandItemPageAction.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="138" column="0" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1785#1786#0" expanded="false" />
-                <element signature="e#1828#1829#0" expanded="false" />
-                <element signature="e#2533#2534#0" expanded="false" />
-                <element signature="e#2575#2576#0" expanded="false" />
-              </folding>
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NavigateToBrandPageAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/actions/NavigateToBrandPageAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -136,17 +115,17 @@
         <entry file="file://$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandItemsPagesData.feature">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExtractBrandPagesData.feature" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ExtractBrandPagesData.feature" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandPagesData.feature">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.16721311">
+              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -185,10 +164,10 @@
         <option value="$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/navigation/WebDriverFactory.java" />
         <option value="$PROJECT_DIR$/src/test/resources/properties/TestConfig-LocalHtmlUnit.properties" />
         <option value="$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/util/FeaturesProcessor.java" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandItemsPagesData.feature" />
-        <option value="$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandPagesData.feature" />
         <option value="$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/BrandPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/PageConstants.java" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandItemsPagesData.feature" />
+        <option value="$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandPagesData.feature" />
       </list>
     </option>
   </component>
@@ -1597,7 +1576,7 @@
       <workItem from="1468436181675" duration="3063000" />
       <workItem from="1468443269147" duration="5518000" />
       <workItem from="1468505664619" duration="8268000" />
-      <workItem from="1468518990727" duration="6822000" />
+      <workItem from="1468518990727" duration="7466000" />
     </task>
     <task id="LOCAL-00001" summary="Added step for na gif verification">
       <created>1466102995454</created>
@@ -1695,11 +1674,17 @@
       <option name="project" value="LOCAL" />
       <updated>1468527521072</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="attempting to run test on shawn's working copy with new class name">
+      <created>1468527625064</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1468527625064</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69183000" />
+    <option name="totallyTimeSpent" value="69827000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1924" y="-4" width="1928" height="1042" extended-state="6" />
@@ -1715,7 +1700,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40803382" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24895833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24895833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37632135" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1768,20 +1753,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/BrandItemPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/linux/copy_features_from_external_brands_features_folder.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1843,13 +1814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/actions/NavigateToBrandPageAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="4" selection-start-column="31" selection-end-line="5" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2142,22 +2106,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandItemsPagesData.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandPagesData.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/PageConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2168,12 +2116,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/BrandPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3327869">
+        <state vertical-scroll-proportion="0.0">
           <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
           <folding>
             <element signature="e#3377#3378#0" expanded="true" />
             <element signature="e#3450#3451#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/actions/CrawlThroughBrandPageItemsAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/actions/NavigateToBrandItemPageAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/actions/NavigateToBrandPageAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandItemsPagesData.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/features/setup/ExtractBrandPagesData.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16721311">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
