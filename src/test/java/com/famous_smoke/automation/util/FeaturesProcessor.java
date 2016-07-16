@@ -11,6 +11,7 @@ import java.math.BigInteger;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.Instant;
 import java.security.*;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -237,7 +238,7 @@ public class FeaturesProcessor {
                 .reduce("", (urlAccumulator, url) ->
                         urlAccumulator + "| "
                                 + url  + " | "
-                                + generateRandomNumberHexString() + " |"
+                                + UUID.randomUUID().toString() + "-" + Instant.now().toEpochMilli() + " |"
                                 + LINE_BREAKER);
 
     }
