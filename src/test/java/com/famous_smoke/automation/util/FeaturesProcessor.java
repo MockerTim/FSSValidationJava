@@ -246,9 +246,9 @@ public class FeaturesProcessor {
     private static String generateRandomNumberHexString() {
         return BigIntegers.createRandomInRange(
                 BigInteger.ZERO,
-                new BigInteger("7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF", 18),
+                new BigInteger("7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF", 16),
                 new SecureRandom()
-        ).toString(18);
+        ).toString(16);
     }
 
     /**
