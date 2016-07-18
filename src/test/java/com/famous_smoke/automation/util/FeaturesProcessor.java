@@ -238,7 +238,6 @@ public class FeaturesProcessor {
                 .reduce("", (urlAccumulator, url) ->
                         urlAccumulator + "| "
                                 + url  + " | "
-                                + generateRandomNumberHexString() + " |"
                                 + UUID.randomUUID().toString() + "-" + Instant.now().toEpochMilli() + " |"
                                 + LINE_BREAKER);
 
