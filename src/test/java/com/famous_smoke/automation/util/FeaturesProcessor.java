@@ -12,6 +12,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.security.*;
+import java.time.Instant;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -238,6 +239,7 @@ public class FeaturesProcessor {
                         urlAccumulator + "| "
                                 + url  + " | "
                                 + generateRandomNumberHexString() + " |"
+                                + UUID.randomUUID().toString() + "-" + Instant.now().toEpochMilli() + " |"
                                 + LINE_BREAKER);
 
     }
