@@ -240,6 +240,7 @@ public class FeaturesProcessor {
                         urlAccumulator + "| "
                                 + url  + " | "
                                 + UUID.randomUUID().toString() + "-" + Instant.now().toEpochMilli() + " |"
+                                + generateRandomNumberHexString() + " |"
                                 + LINE_BREAKER);
 
     }
