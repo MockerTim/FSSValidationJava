@@ -237,8 +237,7 @@ public class BasePage {
 
     protected static WebElement waitUntilElementIsClickable(final WebElement element) {
         logger.info("Wait until element is clickable");
-       // return new WebDriverWait(Navigator.driver, WAIT_TIME_IN_SECONDS).until(ExpectedConditions.elementToBeClickable(element));
-        return  null;
+        return new WebDriverWait(Navigator.driver, WAIT_TIME_IN_SECONDS).until(ExpectedConditions.elementToBeClickable(element));
     }
 
 }
