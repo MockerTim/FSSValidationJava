@@ -8,4 +8,4 @@
  * <p>It also contains the handler for the XLS Workbook
  * used for persistence of the Page Objects Data.</p>
  */
-package com.famous_smoke.automation.data;
+package test.java.com.famous_smoke.automation.data;

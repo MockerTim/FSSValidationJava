@@ -1,4 +1,4 @@
-package com.famous_smoke.automation.data;
+package test.java.com.famous_smoke.automation.data;
 
 import java.util.Collection;
 import java.util.List;
@@ -59,16 +59,35 @@ public final class DataFactory {
     public static BrandPageData createBrandPage(final BasePageData basePageData,
                                                 final String header1,
                                                 final String description,
+                                                final String reviewCount,
+                                                final String reviewLink,
                                                 final boolean identified,
                                                 final boolean naGif) {
         return new BrandPageData(
                 basePageData,
                 header1,
                 description,
+                reviewCount,
+                reviewLink,
                 identified,
                 naGif
         );
     }
+    
+    
+    public static BrandReviewPageData createBrandReviewPage(final BasePageData basePageData,
+									            final String header1)
+									             {
+		return new BrandReviewPageData(
+				basePageData,
+				header1
+			);
+		}
+    
+    
+    
+    
+    
 
     public static BrandItemPageData createBrandItemPage(final BasePageData baseData,
                                                         final String header1,
@@ -89,6 +108,27 @@ public final class DataFactory {
                 naGif
         );
     }
+    
+    
+    public static BrandItemReviewPageData createBrandItemReviewPage(final BasePageData baseData,
+            final String header1,
+            final String description,
+            final Collection<String> specs,
+            final String pricing,
+            final String rating,
+            final Boolean identified,
+            final Boolean naGif) {
+				return new BrandItemReviewPageData(
+				baseData,
+				header1,
+				description,
+				specs,
+				pricing,
+				rating,
+				identified,
+				naGif
+				                  );
+		}
 
     public static BrandListPageData createBrandListPage(final BasePageData baseData,
                                                         final Collection<String> brandLinks) {

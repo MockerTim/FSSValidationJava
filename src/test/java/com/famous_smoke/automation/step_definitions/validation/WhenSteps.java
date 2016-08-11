@@ -1,8 +1,8 @@
-package com.famous_smoke.automation.step_definitions.validation;
+package test.java.com.famous_smoke.automation.step_definitions.validation;
 
-import com.famous_smoke.automation.Hooks;
-import com.famous_smoke.automation.actions.NavigateToBrandItemPageAction;
-import com.famous_smoke.automation.actions.NavigateToBrandPageAction;
+import test.java.com.famous_smoke.automation.Hooks;
+import test.java.com.famous_smoke.automation.actions.NavigateToBrandItemPageAction;
+import test.java.com.famous_smoke.automation.actions.NavigateToBrandPageAction;
 //import cucumber.api.PendingException;
 import cucumber.api.java.en.When;
 

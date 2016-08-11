@@ -1,10 +1,10 @@
-package com.famous_smoke.automation.step_definitions.setup;
+package test.java.com.famous_smoke.automation.step_definitions.setup;
 
-import com.famous_smoke.automation.Hooks;
-import com.famous_smoke.automation.util.FeaturesProcessor;
+import test.java.com.famous_smoke.automation.Hooks;
+import test.java.com.famous_smoke.automation.util.FeaturesProcessor;
 import cucumber.api.java.en.Then;
 
-import static com.famous_smoke.automation.assertions.FamousSmokeAssertions.fail;
+import static test.java.com.famous_smoke.automation.assertions.FamousSmokeAssertions.fail;
 
 /**
  * Created by drew on 27-12-2015.
@@ -29,6 +29,20 @@ public class ThenSteps {
     public void i_should_process_the_items_features_templates() throws Throwable {
         if (Hooks.testSetupNeeded) {
             FeaturesProcessor.processItemsFeatures(Hooks.testBrandItemPagesData);
+        }
+    }
+    
+    @Then("^I should process the brand review features templates$")
+    public void i_should_process_the_brand_review_features_templates() throws Throwable {
+        if (Hooks.testSetupNeeded) {
+            FeaturesProcessor.processBrandReviewFeatures(Hooks.testBrandReviewPagesData);
+        }
+    }
+    
+    @Then("^I should process the items review features templates$")
+    public void i_should_process_the_items_review_features_templates() throws Throwable {
+        if (Hooks.testSetupNeeded) {
+            FeaturesProcessor.processBrandItemsReviewFeatures(Hooks.testBrandItemReviewPagesData);
         }
     }
 

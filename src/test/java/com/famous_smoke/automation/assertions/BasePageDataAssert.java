@@ -1,7 +1,7 @@
-package com.famous_smoke.automation.assertions;
+package test.java.com.famous_smoke.automation.assertions;
 
-import com.famous_smoke.automation.data.BasePageData;
-import com.famous_smoke.automation.data.BasePageData;
+import test.java.com.famous_smoke.automation.data.BasePageData;
+import test.java.com.famous_smoke.automation.data.BasePageData;
 import org.assertj.core.api.AbstractAssert;
 
 import java.util.List;

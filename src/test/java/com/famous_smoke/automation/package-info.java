@@ -3,4 +3,4 @@
  *
  * <p>In the root of this package we'll have the Test runners and the Hooks for the execution of the tests.</p>
  */
-package com.famous_smoke.automation;
+package test.java.com.famous_smoke.automation;

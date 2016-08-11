@@ -1,4 +1,4 @@
-package com.famous_smoke.automation.util;
+package test.java.com.famous_smoke.automation.util;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;

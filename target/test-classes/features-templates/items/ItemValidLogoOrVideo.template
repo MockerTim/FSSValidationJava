@@ -1,0 +1,13 @@
+@validation
+@items
+Feature: The Item Pages should have a visible Logo or visible Video
+
+  Scenario Outline: I will validate the Brand Logo or Video
+    Given I want to the validate the item in "<URL>"
+    When I load the item page
+    Then the item identification should be visible
+    And the item page should not be a placeholder image url ending in na.gif
+
+    Examples:
+      | URL | SCENARIO-ID |
+  <LOAD_ITEM_URLS>

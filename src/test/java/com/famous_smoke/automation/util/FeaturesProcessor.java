@@ -1,16 +1,19 @@
-package com.famous_smoke.automation.util;
+package test.java.com.famous_smoke.automation.util;
 
-import com.famous_smoke.automation.data.BasePageData;
-import com.famous_smoke.automation.data.BrandItemPageData;
-import com.famous_smoke.automation.data.BrandPageData;
-import com.famous_smoke.automation.validators.UrlValidators;
+import test.java.com.famous_smoke.automation.data.BasePageData;
+import test.java.com.famous_smoke.automation.data.BrandItemPageData;
+import test.java.com.famous_smoke.automation.data.BrandItemReviewPageData;
+import test.java.com.famous_smoke.automation.data.BrandPageData;
+import test.java.com.famous_smoke.automation.data.BrandReviewPageData;
+import test.java.com.famous_smoke.automation.validators.UrlValidators;
+
 import org.bouncycastle.util.BigIntegers;
 
 import java.io.*;
+import java.math.BigInteger;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.math.BigInteger;
 import java.security.*;
 import java.util.*;
 import java.util.stream.Collectors;
@@ -35,6 +38,8 @@ public class FeaturesProcessor {
     private static final String BASE_FEATURES_TEMPLATES_FOLDER   = FEATURES_TEMPLATES_FOLDER + "base/";
     private static final String BRANDS_FEATURES_TEMPLATES_FOLDER = FEATURES_TEMPLATES_FOLDER + "brands/";
     private static final String ITEMS_FEATURES_TEMPLATES_FOLDER  = FEATURES_TEMPLATES_FOLDER + "items/";
+    private static final String BRANDS_ITEMS_REVIEW_FEATURES_TEMPLATES_FOLDER = FEATURES_TEMPLATES_FOLDER + "itemsReview/";
+    private static final String BRANDS_REVIEW_FEATURES_TEMPLATES_FOLDER  = FEATURES_TEMPLATES_FOLDER + "brandsReview/";
     private static final String PROCESSED_FOLDER                 = "src/test/resources/features/processed/";
     private static final String LOAD_BASE_URLS_KEYWORD           = "<LOAD_BASE_URLS>";
     private static final String LOAD_BRAND_URLS_KEYWORD          = "<LOAD_BRAND_URLS>";
@@ -62,6 +67,14 @@ public class FeaturesProcessor {
 
     public static void processItemsFeatures(final Collection<BrandItemPageData> datas) {
         processFeatures(listItemsTemplateFiles(), new ArrayList<>(datas));
+    }
+    
+    public static void processBrandReviewFeatures(final Collection<BrandReviewPageData> datas) {
+        processFeatures(listBrandsReviewTemplateFiles(), new ArrayList<>(datas));
+    }
+    
+    public static void processBrandItemsReviewFeatures(final Collection<BrandItemReviewPageData> datas) {
+        processFeatures(listBrandsItemReviewTemplateFiles(), new ArrayList<>(datas));
     }
 
     private static void processFeatures(final Collection<Path> templateFiles,
@@ -120,6 +133,15 @@ public class FeaturesProcessor {
     private static List<Path> listItemsTemplateFiles() {
         return listTemplateFolder(ITEMS_FEATURES_TEMPLATES_FOLDER);
     }
+    
+    private static List<Path> listBrandsReviewTemplateFiles() {
+        return listTemplateFolder(BRANDS_REVIEW_FEATURES_TEMPLATES_FOLDER);
+    }
+    
+    private static List<Path> listBrandsItemReviewTemplateFiles() {
+        return listTemplateFolder(BRANDS_ITEMS_REVIEW_FEATURES_TEMPLATES_FOLDER);
+    }
+
 
     /**
      * Creates a List of Paths with the templates
@@ -245,9 +267,9 @@ public class FeaturesProcessor {
     private static String generateRandomNumberHexString() {
         return BigIntegers.createRandomInRange(
                 BigInteger.ZERO,
-                new BigInteger("7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF", 16),
+                new BigInteger("7FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF", 18),
                 new SecureRandom()
-        ).toString(16);
+        ).toString(18);
     }
 
     /**

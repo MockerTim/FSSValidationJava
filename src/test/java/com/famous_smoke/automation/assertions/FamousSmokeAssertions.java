@@ -1,8 +1,8 @@
-package com.famous_smoke.automation.assertions;
+package test.java.com.famous_smoke.automation.assertions;
 
-import com.famous_smoke.automation.data.BasePageData;
-import com.famous_smoke.automation.data.BrandItemPageData;
-import com.famous_smoke.automation.data.BrandPageData;
+import test.java.com.famous_smoke.automation.data.BasePageData;
+import test.java.com.famous_smoke.automation.data.BrandItemPageData;
+import test.java.com.famous_smoke.automation.data.BrandPageData;
 import org.assertj.core.api.Assertions;
 
 

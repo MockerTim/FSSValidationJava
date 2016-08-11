@@ -1,4 +1,4 @@
-package com.famous_smoke.automation.assertions;
+package test.java.com.famous_smoke.automation.assertions;
 
 /**
  *  <p>Contains the Assertion Messages to

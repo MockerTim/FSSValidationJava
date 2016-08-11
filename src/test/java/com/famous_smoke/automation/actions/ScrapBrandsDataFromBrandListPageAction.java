@@ -1,11 +1,12 @@
-package com.famous_smoke.automation.actions;
+package test.java.com.famous_smoke.automation.actions;
 
-import com.famous_smoke.automation.Hooks;
-import com.famous_smoke.automation.data.BrandListPageData;
-import com.famous_smoke.automation.data.BrandPageData;
-import com.famous_smoke.automation.navigation.Navigator;
-import com.famous_smoke.automation.pageobjects.BrandListPage;
-import com.famous_smoke.automation.pageobjects.BrandPage;
+import test.java.com.famous_smoke.automation.Hooks;
+import test.java.com.famous_smoke.automation.data.BrandListPageData;
+import test.java.com.famous_smoke.automation.data.BrandPageData;
+import test.java.com.famous_smoke.automation.navigation.Navigator;
+import test.java.com.famous_smoke.automation.pageobjects.BrandListPage;
+import test.java.com.famous_smoke.automation.pageobjects.BrandPage;
+
 import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
@@ -41,6 +42,7 @@ public class ScrapBrandsDataFromBrandListPageAction {
      */
     public static List<BrandPageData> execute() throws Throwable {
         List<BrandPageData> brandsData = new ArrayList<>();
+        
         Hooks.testBrandListPageData = BrandListPage.getBrandListData();
         int crawl = 0;
         for (String brandLink : Hooks.testBrandListPageData.getBrandLinks()) {
@@ -48,6 +50,7 @@ public class ScrapBrandsDataFromBrandListPageAction {
                 Hooks.testUrl = brandLink;
                 logger.info("SCRAPPING DATA FROM " + Hooks.testUrl);
                 brandsData.add(NavigateToBrandPageAction.execute());
+               
             } catch (Exception ex) {
                 String message = "FAILED TO SCRAP DATA FROM " + Hooks.testUrl + "\n"
                                + "EXCEPTION MESSAGE IS: " + ex.getMessage();

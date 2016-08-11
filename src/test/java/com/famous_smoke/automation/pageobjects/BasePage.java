@@ -1,8 +1,8 @@
-package com.famous_smoke.automation.pageobjects;
+package test.java.com.famous_smoke.automation.pageobjects;
 
-import com.famous_smoke.automation.data.BasePageData;
-import com.famous_smoke.automation.data.DataFactory;
-import com.famous_smoke.automation.navigation.Navigator;
+import test.java.com.famous_smoke.automation.data.BasePageData;
+import test.java.com.famous_smoke.automation.data.DataFactory;
+import test.java.com.famous_smoke.automation.navigation.Navigator;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.famous_smoke.automation.util.SeleniumFinder.*;
+import static test.java.com.famous_smoke.automation.util.SeleniumFinder.*;
 
 /**
  * <p>Contains the common elements for all
@@ -237,7 +237,8 @@ public class BasePage {
 
     protected static WebElement waitUntilElementIsClickable(final WebElement element) {
         logger.info("Wait until element is clickable");
-        return new WebDriverWait(Navigator.driver, WAIT_TIME_IN_SECONDS).until(ExpectedConditions.elementToBeClickable(element));
+       // return new WebDriverWait(Navigator.driver, WAIT_TIME_IN_SECONDS).until(ExpectedConditions.elementToBeClickable(element));
+        return  null;
     }
 
 }

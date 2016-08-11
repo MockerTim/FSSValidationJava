@@ -1,9 +1,9 @@
-package com.famous_smoke.automation.step_definitions.seo;
+package test.java.com.famous_smoke.automation.step_definitions.seo;
 
-import com.famous_smoke.automation.Hooks;
+import test.java.com.famous_smoke.automation.Hooks;
 import cucumber.api.java.en.Then;
 
-import static com.famous_smoke.automation.assertions.FamousSmokeAssertions.assertThat;
+import static test.java.com.famous_smoke.automation.assertions.FamousSmokeAssertions.assertThat;
 
 
 /**

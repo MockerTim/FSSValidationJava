@@ -1,8 +1,8 @@
-package com.famous_smoke.automation.pageobjects;
+package test.java.com.famous_smoke.automation.pageobjects;
 
-import com.famous_smoke.automation.data.BrandListPageData;
-import com.famous_smoke.automation.data.DataFactory;
-import com.famous_smoke.automation.util.SeleniumFinder;
+import test.java.com.famous_smoke.automation.data.BrandListPageData;
+import test.java.com.famous_smoke.automation.data.DataFactory;
+import test.java.com.famous_smoke.automation.util.SeleniumFinder;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

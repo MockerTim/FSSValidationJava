@@ -1,7 +1,7 @@
-package com.famous_smoke.automation.pageobjects;
+package test.java.com.famous_smoke.automation.pageobjects;
 
-import com.famous_smoke.automation.data.BrandItemPageData;
-import com.famous_smoke.automation.data.DataFactory;
+import test.java.com.famous_smoke.automation.data.BrandItemPageData;
+import test.java.com.famous_smoke.automation.data.DataFactory;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +10,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.famous_smoke.automation.util.SeleniumFinder.findElementsByCss;
+import static test.java.com.famous_smoke.automation.util.SeleniumFinder.findElementsByCss;
 
 /**
  * Created by drew on 15-02-2016.

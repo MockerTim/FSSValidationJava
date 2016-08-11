@@ -16,4 +16,4 @@
  * Page Objects is through the classes static public
  * interfaces.</p>
  */
-package com.famous_smoke.automation.pageobjects;
+package test.java.com.famous_smoke.automation.pageobjects;

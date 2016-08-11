@@ -1,10 +1,10 @@
-package com.famous_smoke.automation;
+package test.java.com.famous_smoke.automation;
 
-import com.famous_smoke.automation.data.*;
-import com.famous_smoke.automation.navigation.Navigator;
-import com.famous_smoke.automation.navigation.WebDriverFactory;
-import com.famous_smoke.automation.pageobjects.BasePage;
-import com.famous_smoke.automation.util.TestConfigReader;
+import test.java.com.famous_smoke.automation.data.*;
+import test.java.com.famous_smoke.automation.navigation.Navigator;
+import test.java.com.famous_smoke.automation.navigation.WebDriverFactory;
+import test.java.com.famous_smoke.automation.pageobjects.BasePage;
+import test.java.com.famous_smoke.automation.util.TestConfigReader;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -78,11 +78,13 @@ public class Hooks {
      * that need to collect data from multiple URLS.
      */
     public static Collection<BrandPageData> testBrandPagesData;
+    public static Collection<BrandReviewPageData> testBrandReviewPagesData;
     /**
      * All the BrandPageItemData objects that are fetched by tests
      * that need to collect data from multiple urls.
      */
     public static Collection<BrandItemPageData> testBrandItemPagesData;
+    public static Collection<BrandItemReviewPageData> testBrandItemReviewPagesData;
 
     public static BrandItemPageData testBrandItemPageData;
     public static BrandItemPageData extractedBrandItemPageData;

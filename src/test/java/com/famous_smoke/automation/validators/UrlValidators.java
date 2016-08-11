@@ -1,4 +1,4 @@
-package com.famous_smoke.automation.validators;
+package test.java.com.famous_smoke.automation.validators;
 
 /**
  * <p>Provides validator to determine the type of

@@ -1,4 +1,4 @@
-package com.famous_smoke.automation.navigation;
+package test.java.com.famous_smoke.automation.navigation;
 
 /**
  * <p>The WebDrivers supported by the framework.</p>

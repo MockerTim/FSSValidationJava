@@ -1,7 +1,7 @@
-package com.famous_smoke.automation.actions;
+package test.java.com.famous_smoke.automation.actions;
 
-import com.famous_smoke.automation.data.BrandPageData;
-import com.famous_smoke.automation.pageobjects.BrandPage;
+import test.java.com.famous_smoke.automation.data.BrandPageData;
+import test.java.com.famous_smoke.automation.pageobjects.BrandPage;
 import org.apache.log4j.Logger;
 
 /**

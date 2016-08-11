@@ -1,6 +1,6 @@
-package com.famous_smoke.automation.data;
+package test.java.com.famous_smoke.automation.data;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
+//import com.sun.org.apache.xpath.internal.operations.Bool;
 
 import java.util.Collection;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.famous_smoke.automation.pageobjects;
+package test.java.com.famous_smoke.automation.pageobjects;
 
 /**
  * <p>Contains the filter values that the Page
@@ -9,7 +9,6 @@ public final class PageConstants {
     public static final String ATTRIBUTE_CONTENT     = "content";
     public static final String ATTRIBUTE_HREF        = "href";
     public static final String ATTRIBUTE_SRC         = "src";
-
     public static final String META_DESCRIPTION_NAME = "description";
     public static final String BREADCRUMBS_CSS       = ".breadcrumb";
     public static final String PROMO_FORM_NAME       = "emailcollection";
@@ -20,17 +19,24 @@ public final class PageConstants {
     public static final String BRAND_DESCRIPTION_CSS = ".p-copy";
     public static final String BRAND_LOGO_CSS        = ".full.nopad";
     public static final String BRAND_VIDEO_CSS       = ".minivideo";
-    public static final String BRAND_ITEM_BOX_CSS    = ".brandnewbox";
+    public static final String BRAND_ITEM_BOX_CSS    = ".infobox";
+    public static final String BRAND_ITEM_BOX_XPATH    = "//*[@class='brandcategory cigars']//a";
     public static final String BRAND_ITEM_LINK_CSS   = ".brandtitle";
 
     public static final String ITEM_HEADER1_CSS      = ".title.oswald.itemname";
     public static final String ITEM_PRICING_CSS      = ".subtitle.oswald.cblack.itemprice";
     public static final String ITEM_SPECS_CSS        = ".itemspecs.spacer.cdkgray";
     public static final String ITEM_SPECS_TEXT_CSS   = ".left";
-    public static final String ITEM_DESCRIPTION_CSS  = ".p-copy";
+    public static final String ITEM_DESCRIPTION_CSS  = ".left.threequarters";
     public static final String ITEM_RATING_CSS       = ".itemratingbox.itemrating";
     public static final String ITEM_IMAGE_CSS        = ".mainimg.imgzoom";
     public static final String ITEM_VIDEO_CSS        = ".minivideo";
+    public static final String BRANDREVIEWPAGE_IMAGE_XPATH ="//*[@class='dealsku review-image']";
+    public static final String BRAND_REVIEW_COUNT_XPATH    ="//*[@class='left horizontalgap']//b";
+    public static final String BRAND_REVIEW_LINK_XPATH     ="//*[@class='brandreviews']";
+    public static final String BRAND_ITEMS_XPATH           ="//*[@class='brandcategory cigars']//div[@class='brandnewbox']";
+    public static final String BRAND_ITEMSLINK_XPATH       ="//a[@class='brandtitle']";
+    
 
     public static final String CATEGORIES_BRANDS_CSS = ".brand";
 

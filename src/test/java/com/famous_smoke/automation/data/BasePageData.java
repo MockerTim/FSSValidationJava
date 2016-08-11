@@ -1,4 +1,4 @@
-package com.famous_smoke.automation.data;
+package test.java.com.famous_smoke.automation.data;
 
 import java.util.List;
 

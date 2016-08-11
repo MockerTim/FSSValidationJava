@@ -1,6 +1,6 @@
-package com.famous_smoke.automation.data;
+package test.java.com.famous_smoke.automation.data;
 
-import com.famous_smoke.automation.util.TestConfigReader;
+import test.java.com.famous_smoke.automation.util.TestConfigReader;
 import org.apache.poi.hssf.util.HSSFColor;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -45,13 +45,25 @@ public final class DataWorkbook {
      * it's blank.
      */
     private static final String BRANDITEMPAGEDATA_SHEET_NAME = "BrandItemPageData";
+   
+    /**
+    * The name of the sheet with the BrandItemPageData
+    * information.
+    *
+    * This sheet has to exist in the XLSX even if
+    * it's blank.
+    */
+    
+    private static final String BRANDREVIEWPAGEDATA_SHEET_NAME = "BrandReviewPageData";
+    
+    private static final String BRANDITEMREVIEWPAGEDATA_SHEET_NAME="BrandItemReviewPagaData";
     
     private static final int HEADER_ROW = 0;
     
     /**
      * The header row information for the BrandPage
      * Data Sheet.
-     */
+     */ 
     private static final String BRAND_URL_HEADER               = BrandPageData.URL_FIELD_NAME;
     private static final String BRAND_CANONICAL_HEADER         = BrandPageData.CANONICAL_FIELD_NAME;
     private static final String BRAND_TITLE_HEADER             = BrandPageData.TITLE_FIELD_NAME;
@@ -61,6 +73,23 @@ public final class DataWorkbook {
     private static final String BRAND_BREADCRUMBS_TEXT_HEADER  = BrandPageData.BREADCRUMBS_TEXT_FIELD_NAME;
     private static final String BRAND_BREADCRUMBS_LINKS_HEADER = BrandPageData.BREADCRUMBS_LINKS_FIELD_NAME;
     private static final String BRAND_IDENTIFIED_HEADER        = BrandPageData.IDENTIFIED_FIELD_NAME;
+    private static final String BRAND_REVIEW_COUNT             = BrandPageData.IDENTIFIED_REVIEW_COUNT;
+    private static final String BRAND_REVIEW_LINK              = BrandPageData.IDENTIFIED_REVIEW_LINK;
+    
+    
+    
+    /**
+     * The header row information for the BrandReviewPage
+     * Data Sheet.
+     */
+    private static final String BRANDREVIEW_URL_HEADER               = BrandReviewPageData.URL_FIELD_NAME;
+    private static final String BRANDREVIEW_CANONICAL_HEADER         = BrandReviewPageData.CANONICAL_FIELD_NAME;
+    private static final String BRANDREVIEW_TITLE_HEADER             = BrandReviewPageData.TITLE_FIELD_NAME;
+    private static final String BRANDREVIEW_META_DESCRIPTION_HEADER  = BrandReviewPageData.METADESCRIPTION_FIELD_NAME;
+    private static final String BRANDREVIEW_HEADER1_HEADER           = BrandReviewPageData.HEADER1_FIELD_NAME;
+    private static final String BRANDREVIEW_BREADCRUMBS_TEXT_HEADER  = BrandReviewPageData.BREADCRUMBS_TEXT_FIELD_NAME;
+    private static final String BRANDREVIEW_BREADCRUMBS_LINKS_HEADER = BrandReviewPageData.BREADCRUMBS_LINKS_FIELD_NAME;
+    
 
     /**
      * The header row information for the BrandItemPage
@@ -92,7 +121,9 @@ public final class DataWorkbook {
     private static final int BRAND_BREADCRUMBS_TEXT_COLUMN  = 6;
     private static final int BRAND_BREADCRUMBS_LINKS_COLUMN = 7;
     private static final int BRAND_IDENTIFIED_COLUMN        = 8;
-    private static final int BRAND_NAGIF_COLUMN        = 9;
+    private static final int BRAND_REVIEW_COUNT_COLUMN      = 9;
+    private static final int BRAND_REVIEW_LINK_COLUMN       =10;
+    private static final int BRAND_NAGIF_COLUMN             = 11;
 
     private static final int ITEM_URL_COLUMN               = 0;
     private static final int ITEM_CANONICAL_COLUMN         = 1;
@@ -106,8 +137,15 @@ public final class DataWorkbook {
     private static final int ITEM_PRICING_COLUMN           = 9;
     private static final int ITEM_RATING_COLUMN            = 10;
     private static final int ITEM_IDENTIFIED_COLUMN        = 11;
-    private static final int ITEM_NAGIF_COLUMN        = 12;
+    private static final int ITEM_NAGIF_COLUMN             = 12;
 
+    private static final int BRANDREVIEW_URL_COLUMN               = 0;
+    private static final int BRANDREVIEW_CANONICAL_COLUMN         = 1;
+    private static final int BRANDREVIEW_TITLE_COLUMN             = 2;
+    private static final int BRANDREVIEW_META_DESCRIPTION_COLUMN  = 3;
+    private static final int BRANDREVIEW_HEADER1_COLUMN           = 4;
+    private static final int BRANDREVIEW_BREADCRUMBS_TEXT_COLUMN  = 5;
+    private static final int BRANDREVIEW_BREADCRUMBS_LINKS_COLUMN = 6;
     /**
      * The location of the XLSX File.
      */
@@ -129,6 +167,48 @@ public final class DataWorkbook {
      */
     public static DataWorkbook getTestDataWorkbook() {
         return TESTDATA_WORKBOOK;
+    }
+    
+    
+    /**
+     * Writes the Collection of BrandPageData in the
+     * BrandPageData as a table.
+     *
+     * The elements of the BrandPageData objects are
+     * placed in specific columns of the table, this
+     * is determined by a DataMap which pairs each
+     * element with a column.
+     *
+     * If the BrandPageData Sheet already exists, it
+     * is overwritten with only the values passed as
+     * parameters.
+     * @param datas the Collection of BrandPageData
+     *              to write.
+     * @return the current DataWorkbook object,
+     * this allows chained calls.
+     * @throws IOException
+     */
+    public DataWorkbook writeBrandReviewPages(final Collection<BrandReviewPageData> datas) throws IOException {
+        Workbook workbook = openWorkBook(location);
+        Sheet sheet = createBrandReviewPageDataSheet(workbook);
+
+        int row = 1;
+        for (BrandReviewPageData data : datas) {
+            Row brandRow = sheet.createRow(row);
+
+            CellStyle dataStyle = createDataStyle(workbook);
+            getBrandReviewDataMap(data).forEach((column, value) -> {
+                Cell cell = createCell(brandRow, column, dataStyle);
+                cell.setCellValue(value);
+                sheet.autoSizeColumn(cell.getColumnIndex());
+            });
+
+            ++row;
+        }
+
+        writeWorkBook(workbook, location);
+        workbook.close();
+        return this;
     }
 
     /**
@@ -171,7 +251,12 @@ public final class DataWorkbook {
         workbook.close();
         return this;
     }
+    
+    
+    
 
+    
+    
     /**
      * Writes the Collection of the BrandItemPageData
      * as a table.
@@ -212,6 +297,30 @@ public final class DataWorkbook {
         workbook.close();
         return this;
     }
+    
+    
+    public DataWorkbook writeBrandItemReviewPages(final Collection<BrandItemReviewPageData> datas) throws IOException {
+        Workbook workbook = openWorkBook(location);
+        Sheet sheet = createBrandItemReviewPageDataSheet(workbook);
+
+        int row = 1;
+        for (BrandItemReviewPageData data : datas) {
+            Row brandRow = sheet.createRow(row);
+
+            CellStyle dataStyle = createDataStyle(workbook);
+            getBrandItemReviewDataMap(data).forEach((column, value) -> {
+                Cell cell = createCell(brandRow, column, dataStyle);
+                cell.setCellValue(value);
+                sheet.autoSizeColumn(cell.getColumnIndex());
+            });
+
+            ++row;
+        }
+
+        writeWorkBook(workbook, location);
+        workbook.close();
+        return this;
+    }
 
     /**
      * Reads the BrandPageData table in the BrandPageData
@@ -238,6 +347,8 @@ public final class DataWorkbook {
             String breadcrumbsText = getCellValue(dataRow, BRAND_BREADCRUMBS_TEXT_COLUMN);
             String breadcrumbsLinks = getCellValue(dataRow, BRAND_BREADCRUMBS_LINKS_COLUMN);
             String identified = getCellValue(dataRow, BRAND_IDENTIFIED_COLUMN);
+            String reviewCount = getCellValue(dataRow, BRAND_REVIEW_COUNT_COLUMN);
+            String reviewLink = getCellValue(dataRow, BRAND_REVIEW_LINK_COLUMN);
             String naGif = getCellValue(dataRow, BRAND_NAGIF_COLUMN);
 
             brands.add(DataFactory.createBrandPage(
@@ -248,6 +359,8 @@ public final class DataWorkbook {
                     ),
                     header1,
                     description,
+                    reviewCount,
+                    reviewLink,
                     Boolean.valueOf(identified),
                     Boolean.valueOf(naGif)));
         }
@@ -332,15 +445,55 @@ public final class DataWorkbook {
     private static Sheet getBrandPageDataSheet(final Workbook workbook) {
         return getSheet(workbook, BRANDPAGEDATA_SHEET_NAME);
     }
+    
+    private static Sheet getBrandReviewPageDataSheet(final Workbook workbook) {
+        return getSheet(workbook, BRANDREVIEWPAGEDATA_SHEET_NAME);
+    }
+
 
     private static Sheet getBrandItemPageDataSheet(final Workbook workbook) {
         return getSheet(workbook, BRANDITEMPAGEDATA_SHEET_NAME);
+    }
+    
+    private static Sheet getBrandItemReviewPageDataSheet(final Workbook workbook) {
+        return getSheet(workbook, BRANDITEMREVIEWPAGEDATA_SHEET_NAME);
     }
 
     private static Sheet getSheet(final Workbook workbook,
                                   final String sheetName) {
         return workbook.getSheet(sheetName);
     }
+    
+    
+    /**
+     * Creates a new BrandReviewPageData Sheet in the Workbook,
+     * if there is already a sheet, it is deleted in order
+     * to create a new one.
+     *
+     * The Sheet is created with a Header row with the
+     * identifiers of the BrandPageData columns.
+     * @param workbook the Workbook where the Sheet will
+     *                 be created.
+     * @return the new BrandPageData Sheet as an Apache
+     * POI object.
+     */
+    private static Sheet createBrandReviewPageDataSheet(final Workbook workbook) {
+        if (getBrandReviewPageDataSheet(workbook) != null) {
+            deleteSheet(workbook, getBrandReviewPageDataSheet(workbook));
+        }
+        Sheet sheet = workbook.createSheet(BRANDREVIEWPAGEDATA_SHEET_NAME);
+        Row header = sheet.createRow(HEADER_ROW);
+        CellStyle style = createHeaderStyle(workbook);
+
+        getBrandReviewHeaderMap().forEach((column, value) -> {
+            Cell cell = createCell(header, column, style);
+            cell.setCellValue(value);
+            sheet.autoSizeColumn(cell.getColumnIndex());
+        });
+
+        return sheet;
+    }
+
 
     /**
      * Creates a new BrandPageData Sheet in the Workbook,
@@ -388,6 +541,22 @@ public final class DataWorkbook {
         return sheet;
     }
 
+    private static Sheet createBrandItemReviewPageDataSheet(final Workbook workbook) {
+        if (getBrandItemReviewPageDataSheet(workbook) != null) {
+            deleteSheet(workbook, getBrandItemReviewPageDataSheet(workbook));
+        }
+        Sheet sheet = workbook.createSheet(BRANDITEMREVIEWPAGEDATA_SHEET_NAME);
+        Row header = sheet.createRow(HEADER_ROW);
+        CellStyle style = createHeaderStyle(workbook);
+
+        getBrandItemReviewHeaderMap().forEach((column, value) -> {
+            Cell cell = createCell(header, column, style);
+            cell.setCellValue(value);
+            sheet.autoSizeColumn(cell.getColumnIndex());
+        });
+
+        return sheet;
+    }
     /**
      * Deletes a Sheet from a Workbook.
      * @param workbook the Workbook.
@@ -396,6 +565,27 @@ public final class DataWorkbook {
     private static void deleteSheet(final Workbook workbook,
                                     final Sheet sheet) {
         workbook.removeSheetAt(workbook.getSheetIndex(sheet));
+    }
+    
+    
+    
+    /**
+     * Creates a map of the BrandReviewPageData Sheet
+     * table headers specifying in which column
+     * goes each header.
+     * @return the Map with the Column and Header.
+     */
+    private static Map<Integer, String> getBrandReviewHeaderMap() {
+        return Arrays.stream(new Object[][] {
+                {BRANDREVIEW_URL_COLUMN , BRANDREVIEW_URL_HEADER },
+                {BRANDREVIEW_CANONICAL_COLUMN, BRANDREVIEW_CANONICAL_HEADER},
+                {BRANDREVIEW_TITLE_COLUMN , BRANDREVIEW_TITLE_HEADER},
+                {BRANDREVIEW_META_DESCRIPTION_COLUMN,BRANDREVIEW_META_DESCRIPTION_HEADER},
+                {BRANDREVIEW_HEADER1_COLUMN , BRANDREVIEW_HEADER1_HEADER},
+                {BRANDREVIEW_BREADCRUMBS_TEXT_COLUMN, BRANDREVIEW_BREADCRUMBS_TEXT_HEADER},
+                {BRANDREVIEW_BREADCRUMBS_LINKS_COLUMN, BRANDREVIEW_BREADCRUMBS_LINKS_HEADER}
+                
+        }).collect(Collectors.toMap(kv -> (Integer) kv[0], kv -> (String) kv[1]));
     }
 
     /**
@@ -414,7 +604,9 @@ public final class DataWorkbook {
                 {BRAND_DESCRIPTION_COLUMN, BRAND_DESCRIPTION_HEADER},
                 {BRAND_BREADCRUMBS_TEXT_COLUMN, BRAND_BREADCRUMBS_TEXT_HEADER},
                 {BRAND_BREADCRUMBS_LINKS_COLUMN, BRAND_BREADCRUMBS_LINKS_HEADER},
-                {BRAND_IDENTIFIED_COLUMN, BRAND_IDENTIFIED_HEADER}
+                {BRAND_IDENTIFIED_COLUMN, BRAND_IDENTIFIED_HEADER},
+                {BRAND_REVIEW_COUNT_COLUMN, BRAND_REVIEW_COUNT},
+                {BRAND_REVIEW_LINK_COLUMN, BRAND_REVIEW_LINK}
         }).collect(Collectors.toMap(kv -> (Integer) kv[0], kv -> (String) kv[1]));
     }
 
@@ -433,6 +625,46 @@ public final class DataWorkbook {
                 {ITEM_BREADCRUMBS_LINKS_COLUMN, ITEM_BREADCRUMBS_LINKS_HEADER},
                 {ITEM_IDENTIFIED_COLUMN, ITEM_IDENTIFIED_HEADER}
         }).collect(Collectors.toMap(kv -> (Integer) kv[0], kv -> (String) kv[1]));
+    }
+    
+    
+    private static Map<Integer, String> getBrandItemReviewHeaderMap() {
+        return Arrays.stream(new Object[][] {
+                {ITEM_URL_COLUMN, ITEM_URL_HEADER},
+                {ITEM_CANONICAL_COLUMN, ITEM_CANONICAL_HEADER},
+                {ITEM_TITLE_COLUMN, ITEM_TITLE_HEADER},
+                {ITEM_META_DESCRIPTION_COLUMN, ITEM_META_DESCRIPTION_HEADER},
+                {ITEM_HEADER1_COLUMN, ITEM_HEADER1_HEADER},
+                {ITEM_DESCRIPTION_COLUMN, ITEM_DESCRIPTION_HEADER},
+                {ITEM_SPECS_COLUMN, ITEM_SPECS_HEADER},
+                {ITEM_PRICING_COLUMN, ITEM_PRICING_HEADER},
+                {ITEM_RATING_COLUMN, ITEM_RATING_HEADER},
+                {ITEM_BREADCRUMBS_TEXT_COLUMN, ITEM_BREADCRUMBS_TEXT_HEADER},
+                {ITEM_BREADCRUMBS_LINKS_COLUMN, ITEM_BREADCRUMBS_LINKS_HEADER},
+                {ITEM_IDENTIFIED_COLUMN, ITEM_IDENTIFIED_HEADER}
+        }).collect(Collectors.toMap(kv -> (Integer) kv[0], kv -> (String) kv[1]));
+    }
+    
+    
+    
+    /**
+     * Creates a map of the BrandReviewPageData Sheet
+     * table rows specifying in which column
+     * goes each BrandPageData field.
+     * @param data the BrandPageData instance
+     * @return the Map with the Column and
+     * BrandPageData fields.
+     */
+    private static Map<Integer, String> getBrandReviewDataMap(final BrandReviewPageData data) {
+        return Arrays.stream(new Object[][] {
+                {BRANDREVIEW_URL_COLUMN, data.getURL()},
+                {BRANDREVIEW_CANONICAL_COLUMN, data.getCanonical()},
+                {BRANDREVIEW_TITLE_COLUMN , data.getTitle()},
+                {BRANDREVIEW_META_DESCRIPTION_COLUMN, data.getMetaDescription()},
+                {BRANDREVIEW_HEADER1_COLUMN, data.getHeader1()},
+                {BRANDREVIEW_BREADCRUMBS_TEXT_COLUMN, data.getBreadcrumbsText()},
+                {BRANDREVIEW_BREADCRUMBS_LINKS_COLUMN, reduceCollectionToString(data.getBreadcrumbsLinks())}
+                }).collect(Collectors.toMap(kv -> (Integer) kv[0], kv -> (String) kv[1]));
     }
 
     /**
@@ -453,7 +685,9 @@ public final class DataWorkbook {
                 {BRAND_DESCRIPTION_COLUMN, data.getDescription()},
                 {BRAND_BREADCRUMBS_TEXT_COLUMN, data.getBreadcrumbsText()},
                 {BRAND_BREADCRUMBS_LINKS_COLUMN, reduceCollectionToString(data.getBreadcrumbsLinks())},
-                {BRAND_IDENTIFIED_COLUMN, data.getIdentified().toString()}
+                {BRAND_IDENTIFIED_COLUMN, data.getIdentified().toString()},
+                {BRAND_REVIEW_COUNT_COLUMN,data.getReviewCount().toString()},
+                {BRAND_REVIEW_LINK_COLUMN,data.getReviewLink().toString()}
         }).collect(Collectors.toMap(kv -> (Integer) kv[0], kv -> (String) kv[1]));
     }
 
@@ -466,6 +700,25 @@ public final class DataWorkbook {
      * BrandItemPageData fields.
      */
     private static Map<Integer, String> getBrandItemDataMap(final BrandItemPageData data) {
+        return Arrays.stream(new Object[][] {
+                {ITEM_URL_COLUMN, data.getURL()},
+                {ITEM_CANONICAL_COLUMN, data.getCanonical()},
+                {ITEM_TITLE_COLUMN, data.getTitle()},
+                {ITEM_META_DESCRIPTION_COLUMN, data.getMetaDescription()},
+                {ITEM_HEADER1_COLUMN, data.getHeader1()},
+                {ITEM_DESCRIPTION_COLUMN, data.getDescription()},
+                {ITEM_SPECS_COLUMN, reduceCollectionToString(data.getSpecs())},
+                {ITEM_PRICING_COLUMN, data.getPricing()},
+                {ITEM_RATING_COLUMN, data.getRating()},
+                {ITEM_BREADCRUMBS_TEXT_COLUMN, data.getBreadcrumbsText()},
+                {ITEM_BREADCRUMBS_LINKS_COLUMN, reduceCollectionToString(data.getBreadcrumbsLinks())},
+                {ITEM_IDENTIFIED_COLUMN, data.getIdentified().toString()}
+        }).collect(Collectors.toMap(kv -> (Integer) kv[0], kv -> (String) kv[1]));
+    }
+    
+    
+    
+    private static Map<Integer, String> getBrandItemReviewDataMap(final BrandItemReviewPageData data) {
         return Arrays.stream(new Object[][] {
                 {ITEM_URL_COLUMN, data.getURL()},
                 {ITEM_CANONICAL_COLUMN, data.getCanonical()},

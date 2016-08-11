@@ -1,7 +1,7 @@
-package com.famous_smoke.automation.assertions;
+package test.java.com.famous_smoke.automation.assertions;
 
-import com.famous_smoke.automation.data.BrandItemPageData;
-import com.famous_smoke.automation.data.BrandItemPageData;
+import test.java.com.famous_smoke.automation.data.BrandItemPageData;
+import test.java.com.famous_smoke.automation.data.BrandItemPageData;
 
 import org.assertj.core.api.AbstractAssert;
 import org.openqa.selenium.JavascriptExecutor;

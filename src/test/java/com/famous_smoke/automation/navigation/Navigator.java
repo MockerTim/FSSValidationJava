@@ -1,9 +1,13 @@
-package com.famous_smoke.automation.navigation;
+package test.java.com.famous_smoke.automation.navigation;
 
-import com.famous_smoke.automation.pageobjects.BasePage;
-import com.famous_smoke.automation.pageobjects.BrandItemPage;
-import com.famous_smoke.automation.pageobjects.BrandPage;
-import com.famous_smoke.automation.pageobjects.BrandListPage;
+import test.java.com.famous_smoke.automation.pageobjects.BasePage;
+import test.java.com.famous_smoke.automation.pageobjects.BrandItemPage;
+import test.java.com.famous_smoke.automation.pageobjects.BrandItemReviewPage;
+//import test.java.com.famous_smoke.automation.pageobjects.BrandItemReviewPage;
+import test.java.com.famous_smoke.automation.pageobjects.BrandPage;
+import test.java.com.famous_smoke.automation.pageobjects.BrandListPage;
+import test.java.com.famous_smoke.automation.pageobjects.BrandReviewPage;
+
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -49,6 +53,8 @@ private static final Logger logger = Logger.getLogger(Navigator.class);
         Navigator.initializePage(BrandListPage.class);
         Navigator.initializePage(BrandPage.class);
         Navigator.initializePage(BrandItemPage.class);
+        Navigator.initializePage(BrandReviewPage.class);
+        Navigator.initializePage(BrandItemReviewPage.class);
     }
 
     /**

@@ -1,6 +1,6 @@
-package com.famous_smoke.automation.navigation;
+package test.java.com.famous_smoke.automation.navigation;
 
-import com.famous_smoke.automation.util.TestConfigReader;
+import test.java.com.famous_smoke.automation.util.TestConfigReader;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

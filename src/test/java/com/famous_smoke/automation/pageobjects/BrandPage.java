@@ -1,16 +1,19 @@
-package com.famous_smoke.automation.pageobjects;
+package test.java.com.famous_smoke.automation.pageobjects;
 
-import com.famous_smoke.automation.data.BrandPageData;
-import com.famous_smoke.automation.data.DataFactory;
+import test.java.com.famous_smoke.automation.data.BrandPageData;
+import test.java.com.famous_smoke.automation.data.DataFactory;
+
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.famous_smoke.automation.util.SeleniumFinder.findElementByCss;
-import static com.famous_smoke.automation.util.SeleniumFinder.findElementByXPath;
+import static test.java.com.famous_smoke.automation.util.SeleniumFinder.findElementByCss;
+import static test.java.com.famous_smoke.automation.util.SeleniumFinder.findElementByXPath;
 
 /**
  * <p>Represents the Brand pages of the site.</p>
@@ -42,8 +45,22 @@ public class BrandPage extends BasePage {
     /**
      * The Brand Items
      */
-    @FindBy(css = PageConstants.BRAND_ITEM_BOX_CSS)
+    @FindBy(xpath = PageConstants.BRAND_ITEM_BOX_CSS)
     private static List<WebElement> items;
+    /**
+     * The Brand review count
+     */
+    @FindBy(xpath = PageConstants.BRAND_REVIEW_COUNT_XPATH)
+    private static WebElement reviewcount;
+    
+    @FindBy(xpath = PageConstants.BRAND_REVIEW_LINK_XPATH)
+    private static WebElement reviewlink;
+    
+    @FindBy(xpath = PageConstants.BRAND_ITEMS_XPATH)
+    private static List<WebElement> itemsforreview;
+    
+    @FindBy(xpath = PageConstants.BRAND_ITEMSLINK_XPATH)
+    private static List<WebElement> itemsLink;
 
     /**
      * Gets the amount of items associated
@@ -52,9 +69,35 @@ public class BrandPage extends BasePage {
      * associated with this brand.
      */
     public static Integer getItemsCount() {
-        return items.size();
+        return itemsforreview.size();
     }
+    
+    public static List<WebElement> getItemsBlock() {
+    	return itemsforreview;
+    }
+    
+    /**
+     * Gets the item review pages 
+     * with this brand.
+     * @return links to the item review pages which have atleast one review
+     
+     */
+    public static List<String> getItemsLink() {
+    	 List<String> itemslink=new LinkedList<String>();
+    	 int count=1;
+    	 for(WebElement link: itemsforreview){
+    		 if(hasXPATHElement("//*[@class='brandcategory cigars']//div[@class='brandnewbox']["+count+"]//*[@class='brandvotes']")){
+    			 itemslink.add(itemsLink.get(count-1).getAttribute("href").toString()); 
+    			 
+    		 }
+    		 count=count+1;
+    		}
+        return itemslink;
+    }
+    
+   
 
+    
     /**
      * Navigates to the Item in the
      * items list associated with the
@@ -71,13 +114,23 @@ public class BrandPage extends BasePage {
     }
 
     public static List<String> getItemsURLs() {
+    	
+    	
         return items
                 .stream()
                 .map(item -> findElementByCss(item, PageConstants.BRAND_ITEM_LINK_CSS))
                 .map(item -> extractElementAttribute(item, PageConstants.ATTRIBUTE_HREF, true))
                 .collect(Collectors.toList());
+        
+        
     }
 
+    
+    public static List<WebElement> getReviewItems() {
+    	
+    	return itemsforreview;
+        
+    }
     /**
      * Creates the BrandPageData by a mixture
      * of the BasePageData and the WebElements
@@ -88,7 +141,9 @@ public class BrandPage extends BasePage {
     public static BrandPageData getBrandData() {
         String header1Text = extractElementText(header1, hasHeader1());
         String descriptionText = extractElementText(description, hasDescription());
-        return DataFactory.createBrandPage(getBasePageData(), header1Text, descriptionText, isIdentified(), isNaGif());
+        String reviewCountText=extractElementText(reviewcount, hasReviewCount());
+        String reviewLinkText=extractElementAttribute(reviewlink, "href", hasReviewLink());
+        return DataFactory.createBrandPage(getBasePageData(), header1Text, descriptionText,reviewCountText,reviewLinkText,isIdentified(), isNaGif());
     }
 
     /**
@@ -98,6 +153,19 @@ public class BrandPage extends BasePage {
      */
     public static boolean hasHeader1() {
         return hasCSSElement(PageConstants.BRAND_HEADER1_CSS);
+    }
+    
+    /**
+     * Evaluates if the page has review count.
+     * @return true if there is an element found
+     * with the XPATH of the review count.
+     */
+    public static boolean hasReviewCount() {
+        return hasXPATHElement(PageConstants.BRAND_REVIEW_COUNT_XPATH);
+    }
+
+    public static boolean hasReviewLink() {
+        return hasXPATHElement(PageConstants.BRAND_REVIEW_LINK_XPATH);
     }
 
     /**

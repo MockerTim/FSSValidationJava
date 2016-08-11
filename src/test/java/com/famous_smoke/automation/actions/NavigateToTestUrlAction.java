@@ -1,9 +1,9 @@
-package com.famous_smoke.automation.actions;
+package test.java.com.famous_smoke.automation.actions;
 
-import com.famous_smoke.automation.Hooks;
-import com.famous_smoke.automation.data.BasePageData;
-import com.famous_smoke.automation.navigation.Navigator;
-import com.famous_smoke.automation.pageobjects.BasePage;
+import test.java.com.famous_smoke.automation.Hooks;
+import test.java.com.famous_smoke.automation.data.BasePageData;
+import test.java.com.famous_smoke.automation.navigation.Navigator;
+import test.java.com.famous_smoke.automation.pageobjects.BasePage;
 import org.apache.log4j.Logger;
 
 /**

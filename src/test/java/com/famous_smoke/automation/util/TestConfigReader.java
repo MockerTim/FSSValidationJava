@@ -1,6 +1,6 @@
-package com.famous_smoke.automation.util;
+package test.java.com.famous_smoke.automation.util;
 
-import com.famous_smoke.automation.navigation.SupportedWebDrivers;
+import test.java.com.famous_smoke.automation.navigation.SupportedWebDrivers;
 
 import java.io.FileInputStream;
 import java.io.IOException;
