@@ -46,7 +46,7 @@ public class BrandPageDataAssert extends AbstractAssert<BrandPageDataAssert, Bra
      * to allow chain assertions
      */
     public BrandPageDataAssert hasHeader1EqualTo(final String expected){
-        return isEqualTo(BrandPageData.HEADER1_FIELD_NAME, actual.getHeader1(), expected);
+        return isEqualTo(BrandPageData.HEADER1_FIELD_NAME, actual.getHeader1().toLowerCase(), expected.toLowerCase());
     }
 
     /**
