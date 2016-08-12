@@ -12,12 +12,12 @@ import org.junit.runner.RunWith;
  *
  * <p>It publishes its result to <strong>target/cucumber-actionvalidation.json</strong></p>
  */
-//@RunWith(Cucumber.class)
-//@CucumberOptions(
-//		features = {"classpath:features/processed"},
-//		plugin = {"pretty", "json:target/cucumber-actionvalidation.json"},
-//		tags = "@actionvalidation"
-//)
+@RunWith(Cucumber.class)
+@CucumberOptions(
+		features = {"classpath:features/processed"},
+		plugin = {"pretty", "json:target/cucumber-actionvalidation.json"},
+		tags = "@actionvalidation"
+)
 public class ActionValidationTest {
 
 }
