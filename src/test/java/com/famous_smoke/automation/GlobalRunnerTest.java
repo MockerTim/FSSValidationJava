@@ -1,9 +1,8 @@
 package com.famous_smoke.automation;
 
-import com.famous_smoke.automation.navigation.Navigator;
+
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
-import org.junit.AfterClass;
 import org.junit.runner.RunWith;
 
 /**
@@ -16,12 +15,8 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"classpath:features"},
-        plugin = {"pretty", "json:target/cucumber-report.json"}
+		features = {"classpath:features"},
+		plugin = {"pretty", "json:target/cucumber-report.json"}
 )
-public class GlobalRunner {
-    @AfterClass
-    public static void closeNavigator() {
-        Navigator.closeNavigator();
-    }
+public class GlobalRunnerTest {
 }
