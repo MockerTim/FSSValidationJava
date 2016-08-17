@@ -52,7 +52,7 @@ public class ScrapBrandItemsDataFromBrandListPageAction {
                                + "EXCEPTION MESSAGE IS: " + ex.getMessage();
                 logger.error(message);
             }
-            if (++crawl == Hooks.testMaximumCrawls) {
+            if (++crawl >= Hooks.testMaximumCrawls) {
                 break;
             }
         }
