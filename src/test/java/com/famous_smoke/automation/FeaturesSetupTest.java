@@ -18,12 +18,12 @@ import org.junit.runner.RunWith;
  * <p>We guarantee this running one of the jenkins scripts before calling
  * maven directly.</p>
  */
-@RunWith(Cucumber.class)
-@CucumberOptions(
-		features = {"classpath:features/setup/"},
-		plugin = {"pretty", "json:target/cucumber-setup.json"},
-        tags = "@setup"
-)
+//@RunWith(Cucumber.class)
+//@CucumberOptions(
+//		features = {"classpath:features/setup/"},
+//		plugin = {"pretty", "json:target/cucumber-setup.json"},
+//        tags = "@setup"
+//)
 public class FeaturesSetupTest {
 
 }
