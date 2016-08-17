@@ -14,15 +14,15 @@ import org.junit.runner.RunWith;
  *
  * <p>It publishes its results to <strong>target/cucumber-seo.json</strong></p>
  */
-@RunWith(Cucumber.class)
-@CucumberOptions(
-		features = {"classpath:features/processed"},
-		plugin = {"pretty", "json:target/cucumber-seo.json"},
-		tags = "@seo"
-)
-public class SEOTest {
-	@AfterClass
-	public static void closeNavigator() {
-		Navigator.closeNavigator();
-	}
-}
+//@RunWith(Cucumber.class)
+//@CucumberOptions(
+//		features = {"classpath:features"},
+//		plugin = {"pretty", "json:target/cucumber-report.json"},
+//		tags = "@seo"
+//)
+//public class SEOTest {
+//	@AfterClass
+//	public static void closeNavigator() {
+//		Navigator.closeNavigator();
+//	}
+//}
