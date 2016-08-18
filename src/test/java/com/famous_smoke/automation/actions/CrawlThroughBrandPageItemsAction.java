@@ -44,7 +44,7 @@ public class CrawlThroughBrandPageItemsAction {
                 String previousURL = Hooks.testUrl;
                 Hooks.testUrl = itemURL;
                 try {
-                    logger.info("SCRAPPING DATA FROM " + Hooks.testUrl);
+                    logger.info("   SCRAPPING DATA FROM ITEM " + Hooks.testUrl);
                     itemsData.add(NavigateToBrandItemPageAction.execute());
                     Navigator.goBack();
                 } catch (Exception ex) {

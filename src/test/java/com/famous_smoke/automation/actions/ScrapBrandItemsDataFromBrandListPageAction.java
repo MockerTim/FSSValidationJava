@@ -46,6 +46,7 @@ public class ScrapBrandItemsDataFromBrandListPageAction {
             try {
                 Hooks.testUrl = brandLink;
                 NavigateToTestUrlAction.execute();
+                logger.info("\n" + "SCRAPPING BRAND ITEM DATA FROM BRAND LIST PAGE " + Hooks.testUrl);
                 itemsData.addAll(CrawlThroughBrandPageItemsAction.execute());
             } catch (Exception ex) {
                 String message = "FAILED TO SCRAP DATA FROM " + Hooks.testUrl + "\n"
