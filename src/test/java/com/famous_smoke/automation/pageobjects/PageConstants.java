@@ -28,7 +28,7 @@ public final class PageConstants {
     public static final String ITEM_SPECS_CSS        = ".itemspecs.spacer.cdkgray";
     public static final String ITEM_SPECS_TEXT_CSS   = ".left";
     public static final String ITEM_DESCRIPTION_CSS  = ".p-copy";
-    public static final String ITEM_RATING_CSS       = ".itemratingbox.itemrating";
+    public static final String ITEM_RATING_CSS       = ".badge";
     public static final String ITEM_IMAGE_CSS        = ".mainimg.imgzoom";
     public static final String ITEM_VIDEO_CSS        = ".minivideo";
 

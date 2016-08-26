@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6efea183-2e16-4037-b896-b08ce7e21b26" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/PageConstants.java" afterPath="$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/PageConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/properties/TestConfig.properties" afterPath="$PROJECT_DIR$/src/test/resources/properties/TestConfig.properties" />
     </list>
     <ignored path="FSSValidation-Java.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,8 +50,8 @@
       <file leaf-file-name="PageConstants.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/PageConstants.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.70477384">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6407035">
+              <caret line="30" column="62" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -215,8 +213,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
+    <option name="x" value="-35" />
+    <option name="y" value="18" />
     <option name="width" value="1918" />
     <option name="height" value="1034" />
   </component>
@@ -1298,7 +1296,7 @@
       <workItem from="1468505664619" duration="8268000" />
       <workItem from="1468518990727" duration="7466000" />
       <workItem from="1471374948102" duration="4887000" />
-      <workItem from="1472065139440" duration="7885000" />
+      <workItem from="1472065139440" duration="9956000" />
     </task>
     <task id="LOCAL-00001" summary="Added step for na gif verification">
       <created>1466102995454</created>
@@ -1420,14 +1418,20 @@
       <option name="project" value="LOCAL" />
       <updated>1472152738321</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="updating h1 tag constant for item pages">
+      <created>1472212934051</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1472212934051</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82599000" />
+    <option name="totallyTimeSpent" value="84670000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1918" height="1034" extended-state="0" />
+    <frame x="-35" y="18" width="1918" height="1034" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1879,8 +1883,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/famous_smoke/automation/pageobjects/PageConstants.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70477384">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6407035">
+          <caret line="30" column="62" selection-start-line="30" selection-start-column="62" selection-end-line="30" selection-end-column="62" />
           <folding />
         </state>
       </provider>
