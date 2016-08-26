@@ -23,7 +23,7 @@ public final class PageConstants {
     public static final String BRAND_ITEM_BOX_CSS    = ".brandnewbox";
     public static final String BRAND_ITEM_LINK_CSS   = ".brandtitle";
 
-    public static final String ITEM_HEADER1_CSS      = ".input[name='product_id-div']:checked + div.ic .title.oswald";
+    public static final String ITEM_HEADER1_CSS      = "input[name='product_id-div']:checked + div.ic .title.oswald";
     public static final String ITEM_PRICING_CSS      = "input[name='product_id-div']:checked + div.ic .subtitle.oswald.cblack.itemprice";
     public static final String ITEM_SPECS_CSS        = ".itemspecs.spacer.cdkgray";
     public static final String ITEM_SPECS_TEXT_CSS   = ".left";
