@@ -46,6 +46,8 @@ public class Hooks {
     public static final Map<String, BrandPageData>     TEST_BRAND_DATA_MAP = createTestBrandDataMap();
     public static final Map<String, BrandItemPageData> TEST_ITEM_DATA_MAP  = createTestBrandItemDataMap();
     public static final Map<String, BasePageData>      TEST_BASE_DATA_MAP  = createTestBaseDataMap();
+    public static final Map<String, BrandReviewPageData>  TEST_BRAND_REVIEW_DATA_MAP  = createTestBrandReviewDataMap();
+    public static final Map<String, BrandItemReviewPageData> TEST_ITEM_REVIEW_DATA_MAP  = createTestBrandItemReviewDataMap();
 
     /**
      * The starting URL of each test.
@@ -73,6 +75,10 @@ public class Hooks {
      * that run against only one URL
      */
     public static BrandPageData testBrandPageData;
+    
+    public static BrandReviewPageData extractedBrandReviewPageData;
+    public static BrandReviewPageData testBrandReviewPageData;
+    
     /**
      * All the BrandPageData objects that are fetched by tests
      * that need to collect data from multiple URLS.
@@ -88,6 +94,9 @@ public class Hooks {
 
     public static BrandItemPageData testBrandItemPageData;
     public static BrandItemPageData extractedBrandItemPageData;
+    
+    public static BrandItemReviewPageData testBrandItemReviewPageData;
+    public static BrandItemReviewPageData extractedBrandItemReviewPageData;
     /**
      * This variable is for the check to see if the features
      * templates need to be processed.
@@ -201,10 +210,32 @@ public class Hooks {
         }
     }
 
+    private static Map<String, BrandReviewPageData> createTestBrandReviewDataMap() {
+        try {
+            Collection<BrandReviewPageData> brands = DataWorkbook.getTestDataWorkbook().readBrandReviewPages();
+            ConcurrentHashMap<String, BrandReviewPageData> map = new ConcurrentHashMap<>();
+            brands.stream().forEach(brand -> map.putIfAbsent(brand.getURL(), brand));
+            return map;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
     private static Map<String, BrandItemPageData> createTestBrandItemDataMap() {
         try {
             Collection<BrandItemPageData> items = DataWorkbook.getTestDataWorkbook().readBrandItemPages();
             ConcurrentHashMap<String, BrandItemPageData> map = new ConcurrentHashMap<>();
+            items.stream().forEach(item -> map.putIfAbsent(item.getURL(), item));
+            return map;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    
+    
+    private static Map<String, BrandItemReviewPageData> createTestBrandItemReviewDataMap() {
+        try {
+            Collection<BrandItemReviewPageData> items = DataWorkbook.getTestDataWorkbook().readBrandItemReviewPages();
+            ConcurrentHashMap<String, BrandItemReviewPageData> map = new ConcurrentHashMap<>();
             items.stream().forEach(item -> map.putIfAbsent(item.getURL(), item));
             return map;
         } catch (IOException e) {

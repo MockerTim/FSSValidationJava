@@ -366,6 +366,39 @@ public final class DataWorkbook {
         }
         return brands;
     }
+    
+    
+    public Collection<BrandReviewPageData> readBrandReviewPages() throws IOException {
+        HashSet<BrandReviewPageData> brandsReview = new HashSet<>();
+
+        Workbook workbook = openWorkBook(location);
+
+        Sheet sheet = getBrandReviewPageDataSheet(workbook);
+        for (int row = 1; row <= sheet.getLastRowNum(); ++row) {
+            Row dataRow = sheet.getRow(row);
+
+            String url = getCellValue(dataRow, BRANDREVIEW_URL_COLUMN);
+            String canonical = getCellValue(dataRow, BRANDREVIEW_CANONICAL_COLUMN);
+            String title = getCellValue(dataRow, BRANDREVIEW_TITLE_COLUMN);
+            String metaDescription = getCellValue(dataRow, BRANDREVIEW_META_DESCRIPTION_COLUMN);
+            String header1 = getCellValue(dataRow, BRANDREVIEW_HEADER1_COLUMN);
+            String breadcrumbsText = getCellValue(dataRow, BRANDREVIEW_BREADCRUMBS_TEXT_COLUMN);
+            String breadcrumbsLinks = getCellValue(dataRow, BRANDREVIEW_BREADCRUMBS_LINKS_COLUMN);
+            
+            brandsReview.add(DataFactory.createBrandReviewPage(
+                    DataFactory.createBasePage(
+                            url, title, canonical,
+                            metaDescription, breadcrumbsText,
+                            Arrays.asList(breadcrumbsLinks.split(COLLECTION_SEPARATOR))
+                    ),
+                    header1));
+                   
+                    
+                   // Boolean.valueOf(identified),
+                    //Boolean.valueOf(naGif)));
+        }
+        return brandsReview;
+    }
 
     public Collection<BrandItemPageData> readBrandItemPages() throws IOException {
         HashSet<BrandItemPageData> items = new HashSet<>();
@@ -406,6 +439,49 @@ public final class DataWorkbook {
         }
         return items;
     }
+    
+    
+    
+    public Collection<BrandItemReviewPageData> readBrandItemReviewPages() throws IOException {
+        HashSet<BrandItemReviewPageData> itemsReview = new HashSet<>();
+
+        Workbook workbook = openWorkBook(location);
+
+        Sheet sheet = getBrandItemReviewPageDataSheet(workbook);
+        for (int row = 1; row <= sheet.getLastRowNum(); ++row) {
+            Row dataRow = sheet.getRow(row);
+
+            String url = getCellValue(dataRow, ITEM_URL_COLUMN);
+            String canonical = getCellValue(dataRow, ITEM_CANONICAL_COLUMN);
+            String title = getCellValue(dataRow, ITEM_TITLE_COLUMN);
+            String metaDescription = getCellValue(dataRow, ITEM_META_DESCRIPTION_COLUMN);
+            String header1 = getCellValue(dataRow, ITEM_HEADER1_COLUMN);
+            String description = getCellValue(dataRow, ITEM_DESCRIPTION_COLUMN);
+            String breadcrumbsText = getCellValue(dataRow, ITEM_BREADCRUMBS_TEXT_COLUMN);
+            String breadcrumbsLinks = getCellValue(dataRow, ITEM_BREADCRUMBS_LINKS_COLUMN);
+            String identified = getCellValue(dataRow, ITEM_IDENTIFIED_COLUMN);
+            String specs = getCellValue(dataRow, ITEM_SPECS_COLUMN);
+            String pricing = getCellValue(dataRow, ITEM_PRICING_COLUMN);
+            String rating = getCellValue(dataRow, ITEM_RATING_COLUMN);
+            String naGif = getCellValue(dataRow, ITEM_NAGIF_COLUMN);
+
+            itemsReview.add(DataFactory.createBrandItemReviewPage(
+                    DataFactory.createBasePage(
+                            url, title, canonical,
+                            metaDescription, breadcrumbsText,
+                            Arrays.asList(breadcrumbsLinks.split(COLLECTION_SEPARATOR))
+                    ),
+                    header1,
+                    description,
+                    Arrays.asList(specs.split(COLLECTION_SEPARATOR)),
+                    pricing,
+                    rating,
+                    Boolean.valueOf(identified),
+                    Boolean.valueOf(naGif)));
+        }
+        return itemsReview;
+    }
+
 
     /**
      * Opens the XLSX Workbook specified in the location.

@@ -1,0 +1,12 @@
+@seo1
+@brands
+Feature: The Brand Group Pages have a SEO Paragraph matching the extracted Data
+  Scenario Outline: I will validate the Brand Group SEO Paragraph
+    Given I want to the check the content of the brand url "<URL>"
+    And the url is from a brand group page
+    When I navigate to the brand page
+    Then the brand description should not be empty
+    And the brand description should match the TestData
+    Examples:
+      | URL | SCENARIO-ID |
+  

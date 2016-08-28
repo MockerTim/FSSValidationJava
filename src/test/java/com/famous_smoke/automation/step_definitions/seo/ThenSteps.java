@@ -14,9 +14,11 @@ public class ThenSteps {
     @Then("^the brand description should not be empty$")
     public void the_brand_description_should_not_be_empty() throws Throwable {
         assertThat(Hooks.testBrandPageData)
-                .hasDescription();
+                 .hasDescription();
     }
 
+   
+    
     @Then("^the brand description should match the TestData$")
     public void the_brand_description_should_match_the_TestData() throws Throwable {
         assertThat(Hooks.testBrandPageData)
@@ -28,12 +30,27 @@ public class ThenSteps {
         assertThat(Hooks.testBrandPageData)
                 .hasHeader1();
     }
+    
+    @Then("^the brand review header one should not be empty$")
+    public void the_brand_review_header_one_should_not_be_empty() throws Throwable {
+        assertThat(Hooks.testBrandReviewPageData)
+                .hasHeader1();
+    }
+
 
     @Then("^the brand header one should match the TestData$")
     public void the_brand_header_one_should_match_the_TestData() throws Throwable {
         assertThat(Hooks.testBrandPageData)
                 .hasHeader1EqualTo(Hooks.extractedBrandPageData.getHeader1());
     }
+    
+    
+    @Then("^the brand review header one should match the TestData$")
+    public void the_brand_review_header_one_should_match_the_TestData() throws Throwable {
+        assertThat(Hooks.testBrandReviewPageData)
+                .hasHeader1EqualTo(Hooks.extractedBrandReviewPageData.getHeader1());
+    }
+
 
     @Then("^the item description should not be empty$")
     public void the_item_description_should_not_be_empty() throws Throwable {
@@ -46,6 +63,19 @@ public class ThenSteps {
         assertThat(Hooks.testBrandItemPageData)
                 .hasDescriptionEqualTo(Hooks.extractedBrandItemPageData.getDescription());
     }
+    
+    
+    @Then("^the item review description should not be empty$")
+    public void the_item_review_description_should_not_be_empty() throws Throwable {
+        assertThat(Hooks.testBrandItemReviewPageData)
+                .hasDescription();
+    }
+
+    @Then("^the item review description should match the TestData$")
+    public void the_item_review_description_should_match_the_TestData() throws Throwable {
+        assertThat(Hooks.testBrandItemReviewPageData)
+                .hasDescriptionEqualTo(Hooks.extractedBrandItemReviewPageData.getDescription());
+    }
 
     @Then("^the item header one should not be empty$")
     public void the_item_header_one_should_not_be_empty() throws Throwable {
@@ -57,6 +87,19 @@ public class ThenSteps {
     public void the_item_header_one_should_match_the_TestData() throws Throwable {
         assertThat(Hooks.testBrandItemPageData)
                 .hasHeader1EqualTo(Hooks.extractedBrandItemPageData.getHeader1());
+    }
+    
+    
+    @Then("^the item review header one should not be empty$")
+    public void the_item_review_header_one_should_not_be_empty() throws Throwable {
+        assertThat(Hooks.testBrandItemReviewPageData)
+                .hasHeader1();
+    }
+
+    @Then("^the item review header one should match the TestData$")
+    public void the_item_review_header_one_should_match_the_TestData() throws Throwable {
+        assertThat(Hooks.testBrandItemReviewPageData)
+                .hasHeader1EqualTo(Hooks.extractedBrandItemReviewPageData.getHeader1());
     }
 
     @Then("^the breadcrumbs should not be empty$")

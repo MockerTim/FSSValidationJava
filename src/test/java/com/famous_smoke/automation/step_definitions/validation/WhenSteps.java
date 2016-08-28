@@ -2,6 +2,7 @@ package test.java.com.famous_smoke.automation.step_definitions.validation;
 
 import test.java.com.famous_smoke.automation.Hooks;
 import test.java.com.famous_smoke.automation.actions.NavigateToBrandItemPageAction;
+import test.java.com.famous_smoke.automation.actions.NavigateToBrandItemReviewPageAction;
 import test.java.com.famous_smoke.automation.actions.NavigateToBrandPageAction;
 //import cucumber.api.PendingException;
 import cucumber.api.java.en.When;
@@ -20,6 +21,11 @@ public class WhenSteps {
     @When("^I load the item page$")
     public void i_load_the_item_page() throws Throwable {
         Hooks.testBrandItemPageData = NavigateToBrandItemPageAction.execute();
+    }
+    
+    @When("^I load the item review page$")
+    public void i_load_the_item_review_page() throws Throwable {
+        Hooks.testBrandItemReviewPageData = NavigateToBrandItemReviewPageAction.execute();
     }
 
 }

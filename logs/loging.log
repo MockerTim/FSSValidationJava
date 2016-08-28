@@ -1,48 +1,15 @@
-2016-08-10 10:08:21,271  INFO ScrapBrandsReviewDataFromBrandPagesAction:53 - SCRAPPING DATA FROM https://www.famous-smoke.com/brand/no.+famous+cigars
-2016-08-10 10:10:32,005 ERROR ScrapBrandsReviewDataFromBrandPagesAction:63 - FAILED TO SCRAP DATA FROM https://www.famous-smoke.com/brand/no.+famous+cigars
-EXCEPTION MESSAGE IS: no such window: target window already closed
-from unknown error: web view not found
+2016-08-19 01:41:38,235  INFO CrawlThroughBrandPageItemsAction:63 - SCRAPPING DATA FROM https://www.famous-smoke.com/no.+famous+petite+corona+cigars/item+49360
+2016-08-19 01:41:45,562  INFO CrawlThroughBrandPageItemsAction:63 - SCRAPPING DATA FROM https://www.famous-smoke.com/no.+famous+toro+cigars/item+49358
+2016-08-19 01:41:58,456  INFO CrawlThroughBrandPageItemsAction:63 - SCRAPPING DATA FROM https://www.famous-smoke.com/1994+by+la+flor+dominicana+aldaba+cigars/item+45891
+2016-08-19 01:42:11,435 ERROR ScrapBrandItemsDataFromBrandListPageAction:55 - FAILED TO SCRAP DATA FROM https://www.famous-smoke.com/brand/262+allegiance+cigars
+EXCEPTION MESSAGE IS: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='brandvotes']"}
   (Session info: chrome=52.0.2743.116)
   (Driver info: chromedriver=2.22.397933 (1cab651507b88dec79b2b2a22d1943c01833cc1b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 0 milliseconds
+Command duration or timeout: 69 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
 System info: host: 'Lenovo-PC', ip: '192.168.10.239', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_40'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.22.397933 (1cab651507b88dec79b2b2a22d1943c01833cc1b), userDataDir=C:\Users\Ravi\AppData\Local\Temp\scoped_dir7652_12181}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=52.0.2743.116, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: c78bc809284fe30c6fe73aa7a9eee07f
-2016-08-10 10:10:32,005  INFO ScrapBrandsReviewDataFromBrandPagesAction:53 - SCRAPPING DATA FROM https://www.famous-smoke.com/brand/1994+by+la+flor+dominicana+cigars
-2016-08-10 10:10:32,037 ERROR ScrapBrandsReviewDataFromBrandPagesAction:63 - FAILED TO SCRAP DATA FROM https://www.famous-smoke.com/brand/1994+by+la+flor+dominicana+cigars
-EXCEPTION MESSAGE IS: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=52.0.2743.116)
-  (Driver info: chromedriver=2.22.397933 (1cab651507b88dec79b2b2a22d1943c01833cc1b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 16 milliseconds
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'Lenovo-PC', ip: '192.168.10.239', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_40'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.22.397933 (1cab651507b88dec79b2b2a22d1943c01833cc1b), userDataDir=C:\Users\Ravi\AppData\Local\Temp\scoped_dir7652_12181}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=52.0.2743.116, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: c78bc809284fe30c6fe73aa7a9eee07f
-2016-08-10 10:10:32,037  INFO ScrapBrandsReviewDataFromBrandPagesAction:53 - SCRAPPING DATA FROM https://www.famous-smoke.com/brandgroup/262+cigars
-2016-08-10 10:10:32,052 ERROR ScrapBrandsReviewDataFromBrandPagesAction:63 - FAILED TO SCRAP DATA FROM https://www.famous-smoke.com/brandgroup/262+cigars
-EXCEPTION MESSAGE IS: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=52.0.2743.116)
-  (Driver info: chromedriver=2.22.397933 (1cab651507b88dec79b2b2a22d1943c01833cc1b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 15 milliseconds
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'Lenovo-PC', ip: '192.168.10.239', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_40'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.22.397933 (1cab651507b88dec79b2b2a22d1943c01833cc1b), userDataDir=C:\Users\Ravi\AppData\Local\Temp\scoped_dir7652_12181}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=52.0.2743.116, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: c78bc809284fe30c6fe73aa7a9eee07f
-2016-08-10 10:10:32,052  INFO ScrapBrandsReviewDataFromBrandPagesAction:53 - SCRAPPING DATA FROM https://www.famous-smoke.com/brand/262+allegiance+cigars
-2016-08-10 10:10:32,068 ERROR ScrapBrandsReviewDataFromBrandPagesAction:63 - FAILED TO SCRAP DATA FROM https://www.famous-smoke.com/brand/262+allegiance+cigars
-EXCEPTION MESSAGE IS: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: chrome=52.0.2743.116)
-  (Driver info: chromedriver=2.22.397933 (1cab651507b88dec79b2b2a22d1943c01833cc1b),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 16 milliseconds
-Build info: version: '2.53.0', revision: '35ae25b1534ae328c771e0856c93e187490ca824', time: '2016-03-15 10:43:46'
-System info: host: 'Lenovo-PC', ip: '192.168.10.239', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_40'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.22.397933 (1cab651507b88dec79b2b2a22d1943c01833cc1b), userDataDir=C:\Users\Ravi\AppData\Local\Temp\scoped_dir7652_12181}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=52.0.2743.116, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: c78bc809284fe30c6fe73aa7a9eee07f
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.22.397933 (1cab651507b88dec79b2b2a22d1943c01833cc1b), userDataDir=C:\Users\Ravi\AppData\Local\Temp\scoped_dir6720_24364}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=52.0.2743.116, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: aed9256e42a433c43f978d63be857942
+*** Element info: {Using=xpath, value=//*[@class='brandvotes']}

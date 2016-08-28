@@ -22,5 +22,11 @@ public class GivenSteps {
         assertThat(url).isItemURL();
         Hooks.testUrl = url;
     }
+    
+    @Given("^I want to the validate the review item in \"([^\"]*)\"$")
+    public void i_want_to_the_validate_the_review_item_in(final String url) throws Throwable {
+        assertThat(url).isItemReviewURL();
+        Hooks.testUrl = url;
+    }
 
 }

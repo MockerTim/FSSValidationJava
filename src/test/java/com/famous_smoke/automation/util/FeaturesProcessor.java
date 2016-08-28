@@ -45,6 +45,9 @@ public class FeaturesProcessor {
     private static final String LOAD_BRAND_URLS_KEYWORD          = "<LOAD_BRAND_URLS>";
     private static final String LOAD_GROUP_URLS_KEYWORD          = "<LOAD_BRAND_GROUP_URLS>";
     private static final String LOAD_ITEM_URLS_KEYWORD           = "<LOAD_ITEM_URLS>";
+    private static final String LOAD_BRAND_REVIEW_URLS_KEYWORD   = "<LOAD_BRAND_REVIEW_URLS>";
+    private static final String LOAD_ITEM_REVIEW_URLS_KEYWORD    = "<LOAD_ITEM_REVIEW_URLS>";
+    
     private static final String LINE_BREAKER                     = "\n";
 
     private FeaturesProcessor() {
@@ -207,6 +210,8 @@ public class FeaturesProcessor {
                             .replace(LOAD_BRAND_URLS_KEYWORD, retrieveBrandsUrls(urls))
                             .replace(LOAD_GROUP_URLS_KEYWORD, retrieveBrandGroupsUrls(urls))
                             .replace(LOAD_ITEM_URLS_KEYWORD, retrieveItemsUrls(urls))
+                            .replace(LOAD_BRAND_REVIEW_URLS_KEYWORD, retrieveBrandsReviewUrls(urls))
+                            .replace(LOAD_ITEM_REVIEW_URLS_KEYWORD, retrieveItemsUrls(urls))
             );
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -224,6 +229,12 @@ public class FeaturesProcessor {
     private static String retrieveBrandsUrls(final Collection<String> urls) {
         return reduceUrls(
                 urls.stream().filter(UrlValidators::isBrandPage)
+        );
+    }
+    
+    private static String retrieveBrandsReviewUrls(final Collection<String> urls) {
+        return reduceUrls(
+                urls.stream().filter(UrlValidators::isBrandReviewPage)
         );
     }
 
@@ -244,6 +255,12 @@ public class FeaturesProcessor {
     private static String retrieveItemsUrls(final Collection<String> urls) {
         return reduceUrls(
                 urls.stream().filter(UrlValidators::isBrandItemPage)
+        );
+    }
+    
+    private static String retrieveItemsReviewUrls(final Collection<String> urls) {
+        return reduceUrls(
+                urls.stream().filter(UrlValidators::isBrandItemReviewPage)
         );
     }
 

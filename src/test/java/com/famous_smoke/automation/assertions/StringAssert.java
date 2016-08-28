@@ -39,6 +39,16 @@ public class StringAssert extends org.assertj.core.api.StringAssert {
                 .isTrue();
         return this;
     }
+    
+    public StringAssert isBrandReviewURL() {
+        FamousSmokeAssertions
+                .assertThat(UrlValidators.isBrandReviewPage(actual))
+                .overridingErrorMessage(
+                        AssertionMessages.URL_NOT_BRAND,
+                        actual)
+                .isTrue();
+        return this;
+    }
 
     /**
      * Evaluates if the String is a Brand
@@ -65,6 +75,16 @@ public class StringAssert extends org.assertj.core.api.StringAssert {
                 .assertThat(UrlValidators.isBrandItemPage(actual))
                 .overridingErrorMessage(
                         AssertionMessages.URL_NOT_ITEM,
+                        actual)
+                .isTrue();
+        return this;
+    }
+    
+    public StringAssert isItemReviewURL() {
+        FamousSmokeAssertions
+                .assertThat(UrlValidators.isBrandItemReviewPage(actual))
+                .overridingErrorMessage(
+                        AssertionMessages.URL_NOT_ITEMREVIEW,
                         actual)
                 .isTrue();
         return this;

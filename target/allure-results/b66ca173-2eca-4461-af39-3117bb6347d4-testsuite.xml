@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1469643521592" stop="1469643521674" version="1.4.15" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Extracting data from the brand's items in Famous Smoke</name>
+    <title>Extracting data from the brand's items in Famous Smoke</title>
+    <test-cases>
+        <test-case start="1469643521616" stop="1469643521621" status="pending">
+            <name>Given I need to Setup the Features for the Items</name>
+            <title>Given I need to Setup the Features for the Items</title>
+            <failure>
+                <message>Test ignored (without reason)!</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="Lenovo-PC"/>
+                <label name="thread" value="6396@Lenovo-PC.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469643521629" stop="1469643521629" status="pending">
+            <name>And I navigate to the page "https://www.famous-smoke.com/brand-list"</name>
+            <title>And I navigate to the page "https://www.famous-smoke.com/brand-list"</title>
+            <failure>
+                <message>Test ignored (without reason)!</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="Lenovo-PC"/>
+                <label name="thread" value="6396@Lenovo-PC.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469643521633" stop="1469643521633" status="pending">
+            <name>And I crawl through the items of each brand</name>
+            <title>And I crawl through the items of each brand</title>
+            <failure>
+                <message>Test ignored (without reason)!</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="Lenovo-PC"/>
+                <label name="thread" value="6396@Lenovo-PC.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469643521636" stop="1469643521636" status="pending">
+            <name>When I store the extracted items data</name>
+            <title>When I store the extracted items data</title>
+            <failure>
+                <message>Test ignored (without reason)!</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="Lenovo-PC"/>
+                <label name="thread" value="6396@Lenovo-PC.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469643521639" stop="1469643521639" status="pending">
+            <name>Then I should process the base features templates</name>
+            <title>Then I should process the base features templates</title>
+            <failure>
+                <message>Test ignored (without reason)!</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="Lenovo-PC"/>
+                <label name="thread" value="6396@Lenovo-PC.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1469643521641" stop="1469643521641" status="pending">
+            <name>And I should process the items features templates</name>
+            <title>And I should process the items features templates</title>
+            <failure>
+                <message>Test ignored (without reason)!</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="Lenovo-PC"/>
+                <label name="thread" value="6396@Lenovo-PC.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="story" value="Extracting data from the brand's items in Famous Smoke"/>
+        <label name="feature" value="We need to extract the Brand Items Page Data"/>
+        <label name="framework" value="CucumberJVM"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

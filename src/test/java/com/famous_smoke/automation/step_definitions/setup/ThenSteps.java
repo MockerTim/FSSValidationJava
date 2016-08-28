@@ -32,7 +32,7 @@ public class ThenSteps {
         }
     }
     
-    @Then("^I should process the brand review features templates$")
+    @Then("^I should process the brands review features templates$")
     public void i_should_process_the_brand_review_features_templates() throws Throwable {
         if (Hooks.testSetupNeeded) {
             FeaturesProcessor.processBrandReviewFeatures(Hooks.testBrandReviewPagesData);
