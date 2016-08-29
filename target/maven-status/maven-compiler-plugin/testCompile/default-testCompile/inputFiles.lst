@@ -28,6 +28,7 @@ C:\CucumberWorksSpace\FamousSmoke\src\test\java\com\famous_smoke\automation\page
 C:\CucumberWorksSpace\FamousSmoke\src\test\java\com\famous_smoke\automation\step_definitions\seo\ThenSteps.java
 C:\CucumberWorksSpace\FamousSmoke\src\test\java\com\famous_smoke\automation\step_definitions\validation\ThenSteps.java
 C:\CucumberWorksSpace\FamousSmoke\src\test\java\com\famous_smoke\automation\assertions\StringAssert.java
+C:\CucumberWorksSpace\FamousSmoke\src\test\java\com\famous_smoke\automation\assertions\BrandReviewPageDataAssert.java
 C:\CucumberWorksSpace\FamousSmoke\src\test\java\com\famous_smoke\automation\pageobjects\BrandItemReviewPage.java
 C:\CucumberWorksSpace\FamousSmoke\src\test\java\com\famous_smoke\automation\step_definitions\seo\WhenSteps.java
 C:\CucumberWorksSpace\FamousSmoke\src\test\java\com\famous_smoke\automation\package-info.java
@@ -62,6 +63,7 @@ C:\CucumberWorksSpace\FamousSmoke\src\test\java\com\famous_smoke\automation\asse
 C:\CucumberWorksSpace\FamousSmoke\src\test\java\com\famous_smoke\automation\actions\ScrapBrandsDataFromBrandListPageAction.java
 C:\CucumberWorksSpace\FamousSmoke\src\test\java\com\famous_smoke\automation\navigation\SupportedWebDrivers.java
 C:\CucumberWorksSpace\FamousSmoke\src\test\java\com\famous_smoke\automation\actions\package-info.java
+C:\CucumberWorksSpace\FamousSmoke\src\test\java\com\famous_smoke\automation\assertions\BrandItemReviewPageDataAssert.java
 C:\CucumberWorksSpace\FamousSmoke\src\test\java\com\famous_smoke\automation\validators\package-info.java
 C:\CucumberWorksSpace\FamousSmoke\src\test\java\com\famous_smoke\automation\util\SeleniumFinder.java
 C:\CucumberWorksSpace\FamousSmoke\src\test\java\com\famous_smoke\automation\SEOTest.java

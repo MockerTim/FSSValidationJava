@@ -2,6 +2,7 @@ test\java\com\famous_smoke\automation\navigation\Navigator.class
 test\java\com\famous_smoke\automation\actions\NavigateToBrandItemPageAction.class
 test\java\com\famous_smoke\automation\navigation\WebDriverFactory.class
 test\java\com\famous_smoke\automation\pageobjects\BrandReviewPage.class
+test\java\com\famous_smoke\automation\assertions\BrandItemReviewPageDataAssert.class
 test\java\com\famous_smoke\automation\step_definitions\actionvalidation\ThenSteps.class
 test\java\com\famous_smoke\automation\actions\ScrapBrandsDataFromBrandListPageAction.class
 test\java\com\famous_smoke\automation\validators\SourceValidators.class
@@ -11,6 +12,7 @@ test\java\com\famous_smoke\automation\actions\NavigateToTestUrlAction.class
 test\java\com\famous_smoke\automation\actions\NavigateToBrandPageAction.class
 test\java\com\famous_smoke\automation\actions\NavigateToBrandReviewPageAction.class
 test\java\com\famous_smoke\automation\ValidationTest.class
+test\java\com\famous_smoke\automation\assertions\BrandReviewPageDataAssert.class
 test\java\com\famous_smoke\automation\data\BrandListPageData.class
 test\java\com\famous_smoke\automation\assertions\BrandItemPageDataAssert.class
 test\java\com\famous_smoke\automation\pageobjects\BrandItemPage.class

@@ -20,9 +20,9 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"classpath:features/setup/"},
+		features = {"features/setup/"},
 		plugin = {"pretty", "json:target/cucumber-setup.json"},
-        tags = "@itemsReview"
+        tags = "@brandsReview"
 )
 public class FeaturesSetupTest {
 

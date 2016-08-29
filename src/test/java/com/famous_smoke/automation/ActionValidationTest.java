@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = {"classpath:features/processed"},
+		features = {"classpath:features/processed/"},
 		plugin = {"pretty", "json:target/cucumber-actionvalidation.json"},
 		tags = "@actionvalidation"
 )

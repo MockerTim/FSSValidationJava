@@ -14,7 +14,7 @@ All the page objects work as static elements. We have an 'opinionated' execution
 
 #Cucumber
 https://blog.engineyard.com/2009/cucumber-introduction
-Our features are dynamically generated from the group of templates after scrapping some data from the web , particularly, the URL to which we are going to perform the validations. The links contained in the bottom of this README are the templates, which are the "cucumber test cases"
+Our features are dynamically generated from a group of templates after scrapping some data from the web , particularly, the URL to which we are going to perform the validations. The links contained in the bottom of this README are the templates, which are the "cucumber test cases"
 
 Hence the setup feature which performs the data extraction and creates the features from the templates.
 

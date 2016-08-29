@@ -1,0 +1,159 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 10337250512,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.createDriver()"
+            }
+          },
+          {
+            "result": {
+              "duration": 350677,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.shutOffLogger()"
+            }
+          },
+          {
+            "result": {
+              "duration": 3415682,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.setUpShutdownHook()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Extracting data from the brand\u0027s items in Famous Smoke",
+        "description": "",
+        "id": "we-need-to-extract-the-brand-items-review-page-data;extracting-data-from-the-brand\u0027s-items-in-famous-smoke",
+        "after": [
+          {
+            "result": {
+              "duration": 109480,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.checkForFailure(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 32502,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.cleanUp()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 268532326,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I need to Setup the Features for the Items",
+            "match": {
+              "location": "GivenSteps.i_need_to_Setup_the_Features_for_the_Items()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 17109975782,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I navigate to the page \"https://www.famous-smoke.com/brand-list\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "https://www.famous-smoke.com/brand-list",
+                  "offset": 24
+                }
+              ],
+              "location": "GivenSteps.i_navigate_to_the_page(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 53519079618,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I crawl through the item review page of each brand",
+            "match": {
+              "location": "GivenSteps.i_crawl_through_the_item_review_page_of_each_brand()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1102801868,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I store the extracted items review data",
+            "match": {
+              "location": "WhenSteps.i_store_the_extracted_items_review_data()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 199997605,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I should process the base features templates",
+            "match": {
+              "location": "ThenSteps.i_should_process_the_base_features_templates()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 9218533,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I should process the items review features templates",
+            "match": {
+              "location": "ThenSteps.i_should_process_the_items_review_features_templates()"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "We need to extract the Brand items review Page Data",
+    "description": "",
+    "id": "we-need-to-extract-the-brand-items-review-page-data",
+    "keyword": "Feature",
+    "uri": "ExtractBrandsItemReviewPage.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@setup"
+      },
+      {
+        "line": 2,
+        "name": "@itemsReview"
+      }
+    ]
+  }
+]

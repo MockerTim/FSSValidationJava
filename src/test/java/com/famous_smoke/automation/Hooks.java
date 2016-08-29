@@ -187,6 +187,11 @@ public class Hooks {
         extractedBrandPageData = null;
         testBrandPageData = null;
         testBrandPagesData = null;
+        testBrandReviewPagesData=null;
+        testBrandReviewPageData=null;
+        extractedBrandReviewPageData = null;
+        
+        
     }
 
     /**

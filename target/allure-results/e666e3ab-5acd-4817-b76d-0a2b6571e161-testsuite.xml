@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1472500538387" stop="1472500610481" version="1.4.15" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Extracting data from the brand's items in Famous Smoke</name>
+    <title>Extracting data from the brand's items in Famous Smoke</title>
+    <test-cases>
+        <test-case start="1472500538403" stop="1472500538403" status="passed">
+            <name>Given I need to Setup the Features for the Items</name>
+            <title>Given I need to Setup the Features for the Items</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="Lenovo-PC"/>
+                <label name="thread" value="9504@Lenovo-PC.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1472500555634" stop="1472500555634" status="passed">
+            <name>And I navigate to the page "https://www.famous-smoke.com/brand-list"</name>
+            <title>And I navigate to the page "https://www.famous-smoke.com/brand-list"</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="Lenovo-PC"/>
+                <label name="thread" value="9504@Lenovo-PC.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1472500609158" stop="1472500609158" status="passed">
+            <name>And I crawl through the item review page of each brand</name>
+            <title>And I crawl through the item review page of each brand</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="Lenovo-PC"/>
+                <label name="thread" value="9504@Lenovo-PC.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1472500610262" stop="1472500610262" status="passed">
+            <name>When I store the extracted items review data</name>
+            <title>When I store the extracted items review data</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="Lenovo-PC"/>
+                <label name="thread" value="9504@Lenovo-PC.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1472500610466" stop="1472500610466" status="passed">
+            <name>Then I should process the base features templates</name>
+            <title>Then I should process the base features templates</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="Lenovo-PC"/>
+                <label name="thread" value="9504@Lenovo-PC.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1472500610481" stop="1472500610481" status="passed">
+            <name>And I should process the items review features templates</name>
+            <title>And I should process the items review features templates</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="Lenovo-PC"/>
+                <label name="thread" value="9504@Lenovo-PC.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="story" value="Extracting data from the brand's items in Famous Smoke"/>
+        <label name="feature" value="We need to extract the Brand items review Page Data"/>
+        <label name="framework" value="CucumberJVM"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

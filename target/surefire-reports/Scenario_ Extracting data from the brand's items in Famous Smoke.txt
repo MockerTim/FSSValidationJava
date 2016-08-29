@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: Scenario: Extracting data from the brand's items in Famous Smoke
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 83.341 sec - in Scenario: Extracting data from the brand's items in Famous Smoke

@@ -56,7 +56,7 @@ public final class DataWorkbook {
     
     private static final String BRANDREVIEWPAGEDATA_SHEET_NAME = "BrandReviewPageData";
     
-    private static final String BRANDITEMREVIEWPAGEDATA_SHEET_NAME="BrandItemReviewPagaData";
+    private static final String BRANDITEMREVIEWPAGEDATA_SHEET_NAME="BrandItemReviewPageData";
     
     private static final int HEADER_ROW = 0;
     
