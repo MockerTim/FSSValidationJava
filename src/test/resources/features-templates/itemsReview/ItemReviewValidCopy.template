@@ -1,5 +1,5 @@
 @seo1
-@items
+@itemsReview
 Feature: The Item review Pages have a SEO Paragraph matching the extracted Data
 
   Scenario Outline: I will validate the Brand SEO Paragraph
