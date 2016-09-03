@@ -1,5 +1,5 @@
 @validation
-@items
+@itemsReview
 Feature: The Item review Pages should have a visible Logo or visible Video
 
   Scenario Outline: I will validate the Brand Logo or Video
