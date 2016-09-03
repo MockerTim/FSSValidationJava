@@ -1,5 +1,5 @@
-@seo222
-@brands
+@seo2
+@brandsReview
 Feature: The Brand Review Pages have a Header One matching the extracted Data
 
   Scenario Outline: I will validate the Brand Review Header One
