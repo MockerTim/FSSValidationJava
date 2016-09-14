@@ -12,5 +12,6 @@ public enum SupportedWebDrivers {
     LOCAL_FIREFOX,
     LOCAL_HTMLUNIT,
     REMOTE_CHROME,
-    REMOTE_FIREFOX;
+    REMOTE_FIREFOX,
+    REMOTE_BROWSERSTACK
 }

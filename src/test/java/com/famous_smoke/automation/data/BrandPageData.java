@@ -13,17 +13,20 @@ public class BrandPageData extends BasePageData {
     public static final String HEADER1_FIELD_NAME     = "HEADER 1";
     public static final String DESCRIPTION_FIELD_NAME = "SEO PARAGRAPH";
     public static final String IDENTIFIED_FIELD_NAME  = "IDENTIFIED";
+    public static final String INDEX_FIELD_NAME = "INDEX";
 
     private final String header1;
     private final String description;
     private final Boolean identified;
     private final Boolean naGif;
+    private final String metaContent;
 
     public BrandPageData(final BasePageData basePageData,
                          final String header1,
                          final String description,
                          final Boolean identified,
-                         final Boolean naGif) {
+                         final Boolean naGif,
+                         final String metaContent) {
         super(
                 basePageData.getURL(),
                 basePageData.getCanonical(),
@@ -36,6 +39,7 @@ public class BrandPageData extends BasePageData {
         this.description = description;
         this.identified = identified;
         this.naGif = naGif;
+        this.metaContent = metaContent;
     }
 
     public String getHeader1() {
@@ -53,4 +57,6 @@ public class BrandPageData extends BasePageData {
     public Boolean getNaGif() {
         return naGif;
     }
+
+    public String getMetaContent() {return  metaContent;}
 }

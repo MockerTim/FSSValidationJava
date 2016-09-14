@@ -144,11 +144,14 @@ public class BasePage {
                 PageConstants.ATTRIBUTE_HREF,
                 hasCanonical()
         );
+
+
         String metaDescriptionText = extractElementAttribute(
                 metaDescription,
                 PageConstants.ATTRIBUTE_CONTENT,
                 hasMetaDescription()
         );
+
         String breadcrumbsText = extractElementText(breadcrumbs, hasBreadcrumbs());
 
         List<String> breadcrumbsLinks = findElementsByCss(breadcrumbs, PageConstants.BREADCRUMBS_LINKS_CSS)

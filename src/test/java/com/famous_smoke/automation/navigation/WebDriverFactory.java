@@ -40,6 +40,7 @@ public final class WebDriverFactory {
             case LOCAL_HTMLUNIT: return createLocalHTMLUnitDriver();
             case REMOTE_CHROME: return createRemoteChromeDriver();
             case REMOTE_FIREFOX: return createRemoteFirefoxDriver();
+            case REMOTE_BROWSERSTACK: {return createBrowserStackDriver();}
             default: return createLocalHTMLUnitDriver();
         }
     }
@@ -133,6 +134,40 @@ public final class WebDriverFactory {
             throw new RuntimeException(e);
         }
         return new RemoteWebDriver(seleniumServerUrl, capabilities);
+    }
+
+/*    private static WebDriver createBrowserstackDriver(final DesiredCapabilities capabilities) {
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setCapability("browser", "IE");
+        caps.setCapability("browser_version", "7.0");
+        caps.setCapability("os", "Windows");
+        caps.setCapability("os_version", "XP");
+        caps.setCapability("browserstack.debug", "true");
+
+        WebDriver driver = new RemoteWebDriver(caps);
+        driver.get("http://www.google.com");
+
+        return driver;
+    }*/
+
+    public static WebDriver createBrowserStackDriver(){
+        String USERNAME = TestConfigReader.getBrowserStackUsername();
+        String AUTOMATE_KEY = TestConfigReader.getBrowserStackKey();
+        String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
+        DesiredCapabilities caps = new DesiredCapabilities();
+        caps.setCapability("browser", TestConfigReader.getBrowserStackBrowser());
+        caps.setCapability("browser_version", TestConfigReader.getBrowserStackBrowserVersion());
+        caps.setCapability("os", TestConfigReader.getBrowserStackOs());
+        caps.setCapability("os_version", TestConfigReader.getBrowserStackOsVersion());
+        caps.setCapability("browserstack.debug", "true");
+        WebDriver driver = null;
+        try {
+            driver = new RemoteWebDriver(new URL(URL), caps);
+        }
+        catch (MalformedURLException ex) {
+            logger.error(ex.getMessage());
+        }
+        return driver;
     }
 
 }

@@ -44,6 +44,11 @@ public class BrandPage extends BasePage {
      */
     @FindBy(css = PageConstants.BRAND_ITEM_BOX_CSS)
     private static List<WebElement> items;
+    /**
+     * The MetaIndex.
+     */
+    @FindBy(xpath = PageConstants.META_INDEX)
+    private static WebElement metaIndex;
 
     /**
      * Gets the amount of items associated
@@ -88,7 +93,12 @@ public class BrandPage extends BasePage {
     public static BrandPageData getBrandData() {
         String header1Text = extractElementText(header1, hasHeader1());
         String descriptionText = extractElementText(description, hasDescription());
-        return DataFactory.createBrandPage(getBasePageData(), header1Text, descriptionText, isIdentified(), isNaGif());
+        String metaIndexContent = extractElementAttribute(
+                metaIndex,
+                PageConstants.ATTRIBUTE_CONTENT,
+                hasMetaIndex()
+        );
+        return DataFactory.createBrandPage(getBasePageData(), header1Text, descriptionText, isIdentified(), isNaGif(), metaIndexContent);
     }
 
     /**
@@ -107,6 +117,15 @@ public class BrandPage extends BasePage {
      */
     public static boolean hasDescription() {
         return hasCSSElement(PageConstants.BRAND_DESCRIPTION_CSS);
+    }
+
+    /**
+     * Evaluates if the page has a meta index.
+     * @return true if there are elements found
+     * with the XPATH of the meta index.
+     */
+    public static boolean hasMetaIndex() {
+        return hasXPATHElement(PageConstants.META_INDEX);
     }
 
     /**

@@ -33,6 +33,8 @@ public class BrandItemPage extends BasePage {
     private static WebElement image;
     @FindBy(css = PageConstants.ITEM_VIDEO_CSS)
     private static WebElement video;
+    @FindBy(xpath = PageConstants.META_INDEX)
+    private static WebElement metaIndex;
 
     //Added by drew as na.gif validator
     @FindBy(xpath = PageConstants.NA_IMAGE)
@@ -52,6 +54,10 @@ public class BrandItemPage extends BasePage {
 
     public static boolean hasPricing() {
         return hasCSSElement(PageConstants.ITEM_PRICING_CSS);
+    }
+
+    public static boolean hasMetaIndex() {
+        return hasXPATHElement(PageConstants.META_INDEX);
     }
 
     public static boolean hasRating() {
@@ -79,6 +85,12 @@ public class BrandItemPage extends BasePage {
         if (!ratingText.isEmpty()) {
             ratingText = ratingText.split(RATING_SPLITTER)[0];
         }
+
+        String metaIndexContent = extractElementAttribute(
+                metaIndex,
+                PageConstants.ATTRIBUTE_CONTENT,
+                hasMetaIndex()
+        );
         String pricingText = extractElementText(pricing, hasPricing());
 
         Collection<String> specsTexts = specs.stream()
@@ -95,7 +107,8 @@ public class BrandItemPage extends BasePage {
                 pricingText,
                 ratingText,
                 isIdentified(),
-                isNaGif()
+                isNaGif(),
+                metaIndexContent
         );
     }
 

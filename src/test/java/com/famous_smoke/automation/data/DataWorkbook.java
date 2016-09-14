@@ -61,6 +61,7 @@ public final class DataWorkbook {
     private static final String BRAND_BREADCRUMBS_TEXT_HEADER  = BrandPageData.BREADCRUMBS_TEXT_FIELD_NAME;
     private static final String BRAND_BREADCRUMBS_LINKS_HEADER = BrandPageData.BREADCRUMBS_LINKS_FIELD_NAME;
     private static final String BRAND_IDENTIFIED_HEADER        = BrandPageData.IDENTIFIED_FIELD_NAME;
+    private static final String BRAND_INDEX_HEADER             = BrandPageData.INDEX_FIELD_NAME;
 
     /**
      * The header row information for the BrandItemPage
@@ -78,6 +79,7 @@ public final class DataWorkbook {
     private static final String ITEM_PRICING_HEADER           = BrandItemPageData.PRICING_FIELD_NAME;
     private static final String ITEM_RATING_HEADER            = BrandItemPageData.RATING_FIELD_NAME;
     private static final String ITEM_IDENTIFIED_HEADER        = BrandItemPageData.IDENTIFIED_FIELD_NAME;
+    private static final String ITEM_INDEX_HEADER             = BrandItemPageData.INDEX_FIELD_NAME;
     
     /**
      * The column placements of the BrandPageData elements
@@ -85,28 +87,30 @@ public final class DataWorkbook {
      */
     private static final int BRAND_URL_COLUMN               = 0;
     private static final int BRAND_CANONICAL_COLUMN         = 1;
-    private static final int BRAND_TITLE_COLUMN             = 2;
-    private static final int BRAND_META_DESCRIPTION_COLUMN  = 3;
-    private static final int BRAND_HEADER1_COLUMN           = 4;
-    private static final int BRAND_DESCRIPTION_COLUMN       = 5;
-    private static final int BRAND_BREADCRUMBS_TEXT_COLUMN  = 6;
-    private static final int BRAND_BREADCRUMBS_LINKS_COLUMN = 7;
-    private static final int BRAND_IDENTIFIED_COLUMN        = 8;
-    private static final int BRAND_NAGIF_COLUMN        = 9;
+    private static final int BRAND_INDEX_COLUMN             = 2;
+    private static final int BRAND_TITLE_COLUMN             = 3;
+    private static final int BRAND_META_DESCRIPTION_COLUMN  = 4;
+    private static final int BRAND_HEADER1_COLUMN           = 5;
+    private static final int BRAND_DESCRIPTION_COLUMN       = 6;
+    private static final int BRAND_BREADCRUMBS_TEXT_COLUMN  = 7;
+    private static final int BRAND_BREADCRUMBS_LINKS_COLUMN = 8;
+    private static final int BRAND_IDENTIFIED_COLUMN        = 9;
+    private static final int BRAND_NAGIF_COLUMN        = 10;
 
     private static final int ITEM_URL_COLUMN               = 0;
     private static final int ITEM_CANONICAL_COLUMN         = 1;
-    private static final int ITEM_TITLE_COLUMN             = 2;
-    private static final int ITEM_META_DESCRIPTION_COLUMN  = 3;
-    private static final int ITEM_HEADER1_COLUMN           = 4;
-    private static final int ITEM_DESCRIPTION_COLUMN       = 5;
-    private static final int ITEM_BREADCRUMBS_TEXT_COLUMN  = 6;
-    private static final int ITEM_BREADCRUMBS_LINKS_COLUMN = 7;
-    private static final int ITEM_SPECS_COLUMN             = 8;
-    private static final int ITEM_PRICING_COLUMN           = 9;
-    private static final int ITEM_RATING_COLUMN            = 10;
-    private static final int ITEM_IDENTIFIED_COLUMN        = 11;
-    private static final int ITEM_NAGIF_COLUMN        = 12;
+    private static final int ITEM_INDEX_COLUMN             = 2;
+    private static final int ITEM_TITLE_COLUMN             = 3;
+    private static final int ITEM_META_DESCRIPTION_COLUMN  = 4;
+    private static final int ITEM_HEADER1_COLUMN           = 5;
+    private static final int ITEM_DESCRIPTION_COLUMN       = 6;
+    private static final int ITEM_BREADCRUMBS_TEXT_COLUMN  = 7;
+    private static final int ITEM_BREADCRUMBS_LINKS_COLUMN = 8;
+    private static final int ITEM_SPECS_COLUMN             = 9;
+    private static final int ITEM_PRICING_COLUMN           = 10;
+    private static final int ITEM_RATING_COLUMN            = 11;
+    private static final int ITEM_IDENTIFIED_COLUMN        = 12;
+    private static final int ITEM_NAGIF_COLUMN        = 13;
 
     /**
      * The location of the XLSX File.
@@ -231,6 +235,7 @@ public final class DataWorkbook {
 
             String url = getCellValue(dataRow, BRAND_URL_COLUMN);
             String canonical = getCellValue(dataRow, BRAND_CANONICAL_COLUMN);
+            String index = getCellValue(dataRow, BRAND_INDEX_COLUMN);
             String title = getCellValue(dataRow, BRAND_TITLE_COLUMN);
             String metaDescription = getCellValue(dataRow, BRAND_META_DESCRIPTION_COLUMN);
             String header1 = getCellValue(dataRow, BRAND_HEADER1_COLUMN);
@@ -249,7 +254,8 @@ public final class DataWorkbook {
                     header1,
                     description,
                     Boolean.valueOf(identified),
-                    Boolean.valueOf(naGif)));
+                    Boolean.valueOf(naGif),
+                    index));
         }
         return brands;
     }
@@ -265,6 +271,7 @@ public final class DataWorkbook {
 
             String url = getCellValue(dataRow, ITEM_URL_COLUMN);
             String canonical = getCellValue(dataRow, ITEM_CANONICAL_COLUMN);
+            String index = getCellValue(dataRow, ITEM_INDEX_COLUMN);
             String title = getCellValue(dataRow, ITEM_TITLE_COLUMN);
             String metaDescription = getCellValue(dataRow, ITEM_META_DESCRIPTION_COLUMN);
             String header1 = getCellValue(dataRow, ITEM_HEADER1_COLUMN);
@@ -289,7 +296,8 @@ public final class DataWorkbook {
                     pricing,
                     rating,
                     Boolean.valueOf(identified),
-                    Boolean.valueOf(naGif)));
+                    Boolean.valueOf(naGif),
+                    index));
         }
         return items;
     }
@@ -408,6 +416,7 @@ public final class DataWorkbook {
         return Arrays.stream(new Object[][] {
                 {BRAND_URL_COLUMN, BRAND_URL_HEADER},
                 {BRAND_CANONICAL_COLUMN, BRAND_CANONICAL_HEADER},
+                {BRAND_INDEX_COLUMN,BRAND_INDEX_HEADER},
                 {BRAND_TITLE_COLUMN, BRAND_TITLE_HEADER},
                 {BRAND_META_DESCRIPTION_COLUMN, BRAND_META_DESCRIPTION_HEADER},
                 {BRAND_HEADER1_COLUMN, BRAND_HEADER1_HEADER},
@@ -422,6 +431,7 @@ public final class DataWorkbook {
         return Arrays.stream(new Object[][] {
                 {ITEM_URL_COLUMN, ITEM_URL_HEADER},
                 {ITEM_CANONICAL_COLUMN, ITEM_CANONICAL_HEADER},
+                {ITEM_INDEX_COLUMN,ITEM_INDEX_HEADER},
                 {ITEM_TITLE_COLUMN, ITEM_TITLE_HEADER},
                 {ITEM_META_DESCRIPTION_COLUMN, ITEM_META_DESCRIPTION_HEADER},
                 {ITEM_HEADER1_COLUMN, ITEM_HEADER1_HEADER},
@@ -447,6 +457,7 @@ public final class DataWorkbook {
         return Arrays.stream(new Object[][] {
                 {BRAND_URL_COLUMN, data.getURL()},
                 {BRAND_CANONICAL_COLUMN, data.getCanonical()},
+                {BRAND_INDEX_COLUMN, data.getMetaContent()},
                 {BRAND_TITLE_COLUMN, data.getTitle()},
                 {BRAND_META_DESCRIPTION_COLUMN, data.getMetaDescription()},
                 {BRAND_HEADER1_COLUMN, data.getHeader1()},
@@ -469,6 +480,7 @@ public final class DataWorkbook {
         return Arrays.stream(new Object[][] {
                 {ITEM_URL_COLUMN, data.getURL()},
                 {ITEM_CANONICAL_COLUMN, data.getCanonical()},
+                {ITEM_INDEX_COLUMN, data.getMetaContent()},
                 {ITEM_TITLE_COLUMN, data.getTitle()},
                 {ITEM_META_DESCRIPTION_COLUMN, data.getMetaDescription()},
                 {ITEM_HEADER1_COLUMN, data.getHeader1()},

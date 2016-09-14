@@ -45,6 +45,15 @@ public class TestConfigReader {
     private static final String SELENIUM_SERVER_PORT_PROPERTY = "SELENIUM_SERVER_PORT";
 
     /**
+     * The Browserstack username.
+     */
+    private static final String BROWSERSTACK_USERNAME_PROPERTY = "BROWSERSTACK_USERNAME";
+    private static final String BROWSERSTACK_KEY_PROPERTY = "BROWSERSTACK_KEY";
+    private static final String BROWSERSTACK_BROWSER_PROPERTY = "BROWSERSTACK_BROWSER";
+    private static final String BROWSERSTACK_BROWSER_VERSION_PROPERTY = "BROWSERSTACK_BROWSER_VERSION";
+    private static final String BROWSERSTACK_OS_PROPERTY = "BROWSERSTACK_OS";
+    private static final String BROWSERSTACK_OS_VERSION_PROPERTY = "BROWSERSTACK_OS_VERSION";
+    /**
      * Evaluates the properties and determines
      * the TestData Workbook Path configured.
      * @return the String value with the TestData
@@ -104,5 +113,29 @@ public class TestConfigReader {
             throw new RuntimeException(e);
         }
         return properties;
+    }
+
+    public static String getBrowserStackUsername() {
+        return TESTCONFIG_PROPERTIES.getProperty(BROWSERSTACK_USERNAME_PROPERTY);
+    }
+
+    public static String getBrowserStackKey() {
+        return TESTCONFIG_PROPERTIES.getProperty(BROWSERSTACK_KEY_PROPERTY);
+    }
+
+    public static String getBrowserStackBrowser() {
+        return TESTCONFIG_PROPERTIES.getProperty(BROWSERSTACK_BROWSER_PROPERTY);
+    }
+
+    public static String getBrowserStackBrowserVersion() {
+        return TESTCONFIG_PROPERTIES.getProperty(BROWSERSTACK_BROWSER_VERSION_PROPERTY);
+    }
+
+    public static String getBrowserStackOs() {
+        return TESTCONFIG_PROPERTIES.getProperty(BROWSERSTACK_OS_PROPERTY);
+    }
+
+    public static String getBrowserStackOsVersion() {
+        return TESTCONFIG_PROPERTIES.getProperty(BROWSERSTACK_OS_VERSION_PROPERTY);
     }
 }

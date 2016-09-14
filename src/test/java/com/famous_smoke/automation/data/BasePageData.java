@@ -17,8 +17,6 @@ public class BasePageData {
 
     private static final int   HASH_CODE_SUM_PRIME         = 739;
     private static final int   HASH_CODE_MULT_PRIME        = 499;
-
-
     private final String url;
     private final String canonical;
     private final String title;

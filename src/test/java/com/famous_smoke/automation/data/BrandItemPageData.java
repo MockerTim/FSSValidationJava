@@ -16,6 +16,7 @@ public class BrandItemPageData extends BasePageData {
     public final static String PRICING_FIELD_NAME     = "PRICING";
     public final static String RATING_FIELD_NAME      = "USER RATINGS";
     public final static String IDENTIFIED_FIELD_NAME  = "IDENTIFIED";
+    public static final String INDEX_FIELD_NAME = "INDEX";
 
     private final String header1;
     private final String description;
@@ -24,6 +25,7 @@ public class BrandItemPageData extends BasePageData {
     private final String rating;
     private final Boolean identified;
     private final Boolean naGif;
+    private final String metaContent;
 
     public BrandItemPageData(final BasePageData basePageData,
                              final String header1,
@@ -32,7 +34,8 @@ public class BrandItemPageData extends BasePageData {
                              final String pricing,
                              final String rating,
                              final Boolean identified,
-                             final Boolean naGif) {
+                             final Boolean naGif,
+                             final String metaContent) {
         super(
                 basePageData.getURL(),
                 basePageData.getCanonical(),
@@ -48,6 +51,7 @@ public class BrandItemPageData extends BasePageData {
         this.rating = rating;
         this.identified = identified;
         this.naGif = naGif;
+        this.metaContent = metaContent;
     }
 
     public String getHeader1() {
@@ -77,4 +81,6 @@ public class BrandItemPageData extends BasePageData {
     public Boolean getNaGif() {
         return naGif;
     }
+
+    public String getMetaContent() {return  metaContent;}
 }
