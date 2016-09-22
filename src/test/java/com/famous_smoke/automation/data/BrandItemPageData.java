@@ -17,6 +17,7 @@ public class BrandItemPageData extends BasePageData {
     public final static String RATING_FIELD_NAME      = "USER RATINGS";
     public final static String IDENTIFIED_FIELD_NAME  = "IDENTIFIED";
     public static final String INDEX_FIELD_NAME = "INDEX";
+    public final static String NAGIF_FIELD_NAME  = "NAGIF";
 
     private final String header1;
     private final String description;

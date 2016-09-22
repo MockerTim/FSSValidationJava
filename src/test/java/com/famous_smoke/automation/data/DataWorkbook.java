@@ -62,6 +62,7 @@ public final class DataWorkbook {
     private static final String BRAND_BREADCRUMBS_LINKS_HEADER = BrandPageData.BREADCRUMBS_LINKS_FIELD_NAME;
     private static final String BRAND_IDENTIFIED_HEADER        = BrandPageData.IDENTIFIED_FIELD_NAME;
     private static final String BRAND_INDEX_HEADER             = BrandPageData.INDEX_FIELD_NAME;
+    private static final String BRAND_NAGIF_HEADER             = BrandPageData.NAGIF_FIELD_NAME;
 
     /**
      * The header row information for the BrandItemPage
@@ -80,6 +81,7 @@ public final class DataWorkbook {
     private static final String ITEM_RATING_HEADER            = BrandItemPageData.RATING_FIELD_NAME;
     private static final String ITEM_IDENTIFIED_HEADER        = BrandItemPageData.IDENTIFIED_FIELD_NAME;
     private static final String ITEM_INDEX_HEADER             = BrandItemPageData.INDEX_FIELD_NAME;
+    private static final String ITEM_NAGIF_HEADER             = BrandItemPageData.NAGIF_FIELD_NAME;
     
     /**
      * The column placements of the BrandPageData elements
@@ -423,7 +425,8 @@ public final class DataWorkbook {
                 {BRAND_DESCRIPTION_COLUMN, BRAND_DESCRIPTION_HEADER},
                 {BRAND_BREADCRUMBS_TEXT_COLUMN, BRAND_BREADCRUMBS_TEXT_HEADER},
                 {BRAND_BREADCRUMBS_LINKS_COLUMN, BRAND_BREADCRUMBS_LINKS_HEADER},
-                {BRAND_IDENTIFIED_COLUMN, BRAND_IDENTIFIED_HEADER}
+                {BRAND_IDENTIFIED_COLUMN, BRAND_IDENTIFIED_HEADER},
+                {BRAND_NAGIF_COLUMN, BRAND_NAGIF_HEADER}
         }).collect(Collectors.toMap(kv -> (Integer) kv[0], kv -> (String) kv[1]));
     }
 
@@ -441,7 +444,8 @@ public final class DataWorkbook {
                 {ITEM_RATING_COLUMN, ITEM_RATING_HEADER},
                 {ITEM_BREADCRUMBS_TEXT_COLUMN, ITEM_BREADCRUMBS_TEXT_HEADER},
                 {ITEM_BREADCRUMBS_LINKS_COLUMN, ITEM_BREADCRUMBS_LINKS_HEADER},
-                {ITEM_IDENTIFIED_COLUMN, ITEM_IDENTIFIED_HEADER}
+                {ITEM_IDENTIFIED_COLUMN, ITEM_IDENTIFIED_HEADER},
+                {ITEM_NAGIF_COLUMN, ITEM_NAGIF_HEADER}
         }).collect(Collectors.toMap(kv -> (Integer) kv[0], kv -> (String) kv[1]));
     }
 
@@ -464,7 +468,8 @@ public final class DataWorkbook {
                 {BRAND_DESCRIPTION_COLUMN, data.getDescription()},
                 {BRAND_BREADCRUMBS_TEXT_COLUMN, data.getBreadcrumbsText()},
                 {BRAND_BREADCRUMBS_LINKS_COLUMN, reduceCollectionToString(data.getBreadcrumbsLinks())},
-                {BRAND_IDENTIFIED_COLUMN, data.getIdentified().toString()}
+                {BRAND_IDENTIFIED_COLUMN, data.getIdentified().toString()},
+                {BRAND_NAGIF_COLUMN, data.getNaGif().toString()}
         }).collect(Collectors.toMap(kv -> (Integer) kv[0], kv -> (String) kv[1]));
     }
 
@@ -490,7 +495,8 @@ public final class DataWorkbook {
                 {ITEM_RATING_COLUMN, data.getRating()},
                 {ITEM_BREADCRUMBS_TEXT_COLUMN, data.getBreadcrumbsText()},
                 {ITEM_BREADCRUMBS_LINKS_COLUMN, reduceCollectionToString(data.getBreadcrumbsLinks())},
-                {ITEM_IDENTIFIED_COLUMN, data.getIdentified().toString()}
+                {ITEM_IDENTIFIED_COLUMN, data.getIdentified().toString()},
+                {ITEM_NAGIF_COLUMN, data.getNaGif().toString()}
         }).collect(Collectors.toMap(kv -> (Integer) kv[0], kv -> (String) kv[1]));
     }
 

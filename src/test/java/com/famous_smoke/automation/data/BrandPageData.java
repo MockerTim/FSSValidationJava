@@ -14,6 +14,7 @@ public class BrandPageData extends BasePageData {
     public static final String DESCRIPTION_FIELD_NAME = "SEO PARAGRAPH";
     public static final String IDENTIFIED_FIELD_NAME  = "IDENTIFIED";
     public static final String INDEX_FIELD_NAME = "INDEX";
+    public static final String NAGIF_FIELD_NAME  = "NAGIF";
 
     private final String header1;
     private final String description;
