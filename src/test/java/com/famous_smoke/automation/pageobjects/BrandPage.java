@@ -1,16 +1,15 @@
 package com.famous_smoke.automation.pageobjects;
 
-import com.famous_smoke.automation.data.BrandPageData;
-import com.famous_smoke.automation.data.DataFactory;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import static com.famous_smoke.automation.util.SeleniumFinder.findElementByCss;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.famous_smoke.automation.util.SeleniumFinder.findElementByCss;
-import static com.famous_smoke.automation.util.SeleniumFinder.findElementByXPath;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import com.famous_smoke.automation.data.BrandPageData;
+import com.famous_smoke.automation.data.DataFactory;
 
 /**
  * <p>Represents the Brand pages of the site.</p>
@@ -49,6 +48,9 @@ public class BrandPage extends BasePage {
      */
     @FindBy(xpath = PageConstants.META_INDEX)
     private static WebElement metaIndex;
+    
+    @FindBy(xpath = PageConstants.BRAND_ALT_TAG_CSS)
+    private static WebElement altTag;
 
     /**
      * Gets the amount of items associated
@@ -93,12 +95,13 @@ public class BrandPage extends BasePage {
     public static BrandPageData getBrandData() {
         String header1Text = extractElementText(header1, hasHeader1());
         String descriptionText = extractElementText(description, hasDescription());
+        String altTagText = extractElementAttribute(altTag, PageConstants.ATTRIBUTE_ALT, hasAltTag());
         String metaIndexContent = extractElementAttribute(
                 metaIndex,
                 PageConstants.ATTRIBUTE_CONTENT,
                 hasMetaIndex()
         );
-        return DataFactory.createBrandPage(getBasePageData(), header1Text, descriptionText, isIdentified(), isNaGif(), metaIndexContent);
+        return DataFactory.createBrandPage(getBasePageData(), header1Text, descriptionText, isIdentified(), isNaGif(), metaIndexContent, altTagText);
     }
 
     /**
@@ -154,6 +157,10 @@ public class BrandPage extends BasePage {
      */
     public static boolean isIdentified() {
         return hasLogo() || hasVideo();
+    }
+
+    public static boolean hasAltTag() {
+        return hasXPATHElement(PageConstants.BRAND_ALT_TAG_CSS);
     }
 
     /**

@@ -9,6 +9,7 @@ public final class PageConstants {
     public static final String ATTRIBUTE_CONTENT     = "content";
     public static final String ATTRIBUTE_HREF        = "href";
     public static final String ATTRIBUTE_SRC         = "src";
+    public static final String ATTRIBUTE_ALT         = "alt";
 
     public static final String META_DESCRIPTION_NAME = "description";
     public static final String BREADCRUMBS_CSS       = ".breadcrumb";
@@ -22,6 +23,7 @@ public final class PageConstants {
     public static final String BRAND_VIDEO_CSS       = ".minivideo";
     public static final String BRAND_ITEM_BOX_CSS    = ".brandnewbox";
     public static final String BRAND_ITEM_LINK_CSS   = ".brandtitle";
+    public static final String BRAND_ALT_TAG_CSS     = "//div[@class=brandtop]/div[@class=brandband]/img"; //TODO
     public static final String META_INDEX            = ".//meta[@name='robots']";
 
     public static final String ITEM_HEADER1_CSS      = "input[name='product_id-div']:checked + div.ic .title.oswald";
@@ -32,6 +34,7 @@ public final class PageConstants {
     public static final String ITEM_RATING_CSS       = ".badge";
     public static final String ITEM_IMAGE_CSS        = ".mainimg.imgzoom";
     public static final String ITEM_VIDEO_CSS        = ".minivideo";
+    public static final String ITEM_ALT_TAG_CSS      = "//div[@class=pagecore home]/div/div[@class=flexrow ic][1]/div[@class=flexitembox tac nopad]/img"; //TODO ::
 
     public static final String CATEGORIES_BRANDS_CSS = ".brand";
 

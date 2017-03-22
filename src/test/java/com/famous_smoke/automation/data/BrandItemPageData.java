@@ -1,9 +1,6 @@
 package com.famous_smoke.automation.data;
 
-import com.sun.org.apache.xpath.internal.operations.Bool;
-
 import java.util.Collection;
-import java.util.List;
 
 /**
  * Created by drew on 15-02-2016.
@@ -18,6 +15,7 @@ public class BrandItemPageData extends BasePageData {
     public final static String IDENTIFIED_FIELD_NAME  = "IDENTIFIED";
     public static final String INDEX_FIELD_NAME = "INDEX";
     public final static String NAGIF_FIELD_NAME  = "NAGIF";
+    public static final String ALT_TAG_FIELD_NAME     = "ALT TAG";
 
     private final String header1;
     private final String description;
@@ -27,6 +25,7 @@ public class BrandItemPageData extends BasePageData {
     private final Boolean identified;
     private final Boolean naGif;
     private final String metaContent;
+    private final String altTag;
 
     public BrandItemPageData(final BasePageData basePageData,
                              final String header1,
@@ -36,7 +35,8 @@ public class BrandItemPageData extends BasePageData {
                              final String rating,
                              final Boolean identified,
                              final Boolean naGif,
-                             final String metaContent) {
+                             final String metaContent,
+                             final String altTag) {
         super(
                 basePageData.getURL(),
                 basePageData.getCanonical(),
@@ -53,6 +53,7 @@ public class BrandItemPageData extends BasePageData {
         this.identified = identified;
         this.naGif = naGif;
         this.metaContent = metaContent;
+        this.altTag = altTag;
     }
 
     public String getHeader1() {
@@ -84,4 +85,8 @@ public class BrandItemPageData extends BasePageData {
     }
 
     public String getMetaContent() {return  metaContent;}
+
+    public String getAltTag() {
+        return altTag;
+    }
 }

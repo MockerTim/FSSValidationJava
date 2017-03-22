@@ -61,14 +61,16 @@ public final class DataFactory {
                                                 final String description,
                                                 final boolean identified,
                                                 final boolean naGif,
-                                                final String metaIndexContent) {
+                                                final String metaIndexContent,
+                                                final String altTag) {
         return new BrandPageData(
                 basePageData,
                 header1,
                 description,
                 identified,
                 naGif,
-                metaIndexContent
+                metaIndexContent,
+                altTag
         );
     }
 
@@ -80,7 +82,8 @@ public final class DataFactory {
                                                         final String rating,
                                                         final Boolean identified,
                                                         final Boolean naGif,
-                                                        final String metaIndexContent) {
+                                                        final String metaIndexContent,
+                                                        final String altTag) {
         return new BrandItemPageData(
                 baseData,
                 header1,
@@ -90,7 +93,8 @@ public final class DataFactory {
                 rating,
                 identified,
                 naGif,
-                metaIndexContent
+                metaIndexContent,
+                altTag
         );
     }
 

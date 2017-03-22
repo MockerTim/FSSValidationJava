@@ -98,6 +98,7 @@ public final class DataWorkbook {
     private static final int BRAND_BREADCRUMBS_LINKS_COLUMN = 8;
     private static final int BRAND_IDENTIFIED_COLUMN        = 9;
     private static final int BRAND_NAGIF_COLUMN        = 10;
+    private static final int BRAND_ALT_TAG_COLUMN           = 11;
 
     private static final int ITEM_URL_COLUMN               = 0;
     private static final int ITEM_CANONICAL_COLUMN         = 1;
@@ -113,6 +114,7 @@ public final class DataWorkbook {
     private static final int ITEM_RATING_COLUMN            = 11;
     private static final int ITEM_IDENTIFIED_COLUMN        = 12;
     private static final int ITEM_NAGIF_COLUMN        = 13;
+    private static final int ITEM_ALT_TAG_COLUMN           = 14;
 
     /**
      * The location of the XLSX File.
@@ -246,6 +248,7 @@ public final class DataWorkbook {
             String breadcrumbsLinks = getCellValue(dataRow, BRAND_BREADCRUMBS_LINKS_COLUMN);
             String identified = getCellValue(dataRow, BRAND_IDENTIFIED_COLUMN);
             String naGif = getCellValue(dataRow, BRAND_NAGIF_COLUMN);
+            String altTag = getCellValue(dataRow, BRAND_ALT_TAG_COLUMN);
 
             brands.add(DataFactory.createBrandPage(
                     DataFactory.createBasePage(
@@ -257,7 +260,8 @@ public final class DataWorkbook {
                     description,
                     Boolean.valueOf(identified),
                     Boolean.valueOf(naGif),
-                    index));
+                    index,
+                    altTag));
         }
         return brands;
     }
@@ -285,6 +289,7 @@ public final class DataWorkbook {
             String pricing = getCellValue(dataRow, ITEM_PRICING_COLUMN);
             String rating = getCellValue(dataRow, ITEM_RATING_COLUMN);
             String naGif = getCellValue(dataRow, ITEM_NAGIF_COLUMN);
+            String altTag = getCellValue(dataRow, ITEM_ALT_TAG_COLUMN);
 
             items.add(DataFactory.createBrandItemPage(
                     DataFactory.createBasePage(
@@ -299,7 +304,8 @@ public final class DataWorkbook {
                     rating,
                     Boolean.valueOf(identified),
                     Boolean.valueOf(naGif),
-                    index));
+                    index,
+                    altTag));
         }
         return items;
     }

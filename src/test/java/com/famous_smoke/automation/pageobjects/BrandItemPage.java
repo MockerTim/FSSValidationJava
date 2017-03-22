@@ -35,6 +35,8 @@ public class BrandItemPage extends BasePage {
     private static WebElement video;
     @FindBy(xpath = PageConstants.META_INDEX)
     private static WebElement metaIndex;
+    @FindBy(xpath = PageConstants.ITEM_ALT_TAG_CSS)
+    private static WebElement altTag;
 
     //Added by drew as na.gif validator
     @FindBy(xpath = PageConstants.NA_IMAGE)
@@ -76,12 +78,17 @@ public class BrandItemPage extends BasePage {
         return hasVideo() || hasImage();
     }
 
+    public static boolean hasAltTag() {
+        return hasXPATHElement(PageConstants.ITEM_ALT_TAG_CSS);
+    }
+
     public static boolean isNaGif() { return  hasXPATHElement(PageConstants.NA_IMAGE);}
 
     public static BrandItemPageData getItemData() {
         String header1Text = extractElementText(header1, hasHeader1());
         String descriptionText = extractElementText(description, hasDescription());
         String ratingText = extractElementText(rating, hasRating());
+        String altTagText = extractElementAttribute(altTag, PageConstants.ATTRIBUTE_ALT, hasAltTag());
         if (!ratingText.isEmpty()) {
             ratingText = ratingText.split(RATING_SPLITTER)[0];
         }
@@ -108,7 +115,8 @@ public class BrandItemPage extends BasePage {
                 ratingText,
                 isIdentified(),
                 isNaGif(),
-                metaIndexContent
+                metaIndexContent,
+                altTagText
         );
     }
 
