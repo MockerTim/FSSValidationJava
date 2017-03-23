@@ -35,7 +35,7 @@ public class BrandItemPage extends BasePage {
     private static WebElement video;
     @FindBy(xpath = PageConstants.META_INDEX)
     private static WebElement metaIndex;
-    @FindBy(xpath = PageConstants.ITEM_ALT_TAG_CSS)
+    @FindBy(css = PageConstants.ITEM_ALT_TAG_CSS)
     private static WebElement altTag;
 
     //Added by drew as na.gif validator
@@ -79,7 +79,7 @@ public class BrandItemPage extends BasePage {
     }
 
     public static boolean hasAltTag() {
-        return hasXPATHElement(PageConstants.ITEM_ALT_TAG_CSS);
+        return hasCSSElement(PageConstants.ITEM_ALT_TAG_CSS);
     }
 
     public static boolean isNaGif() { return  hasXPATHElement(PageConstants.NA_IMAGE);}
