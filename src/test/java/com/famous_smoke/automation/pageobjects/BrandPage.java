@@ -49,7 +49,7 @@ public class BrandPage extends BasePage {
     @FindBy(xpath = PageConstants.META_INDEX)
     private static WebElement metaIndex;
     
-    @FindBy(xpath = PageConstants.BRAND_ALT_TAG_CSS)
+    @FindBy(css = PageConstants.BRAND_ALT_TAG_CSS)
     private static WebElement altTag;
 
     /**
@@ -160,7 +160,7 @@ public class BrandPage extends BasePage {
     }
 
     public static boolean hasAltTag() {
-        return hasXPATHElement(PageConstants.BRAND_ALT_TAG_CSS);
+        return hasCSSElement(PageConstants.BRAND_ALT_TAG_CSS);
     }
 
     /**

@@ -23,7 +23,7 @@ public final class PageConstants {
     public static final String BRAND_VIDEO_CSS       = ".minivideo";
     public static final String BRAND_ITEM_BOX_CSS    = ".brandnewbox";
     public static final String BRAND_ITEM_LINK_CSS   = ".brandtitle";
-    public static final String BRAND_ALT_TAG_CSS     = "//div[@class=brandtop]/div[@class=brandband]/img"; //TODO
+    public static final String BRAND_ALT_TAG_CSS     = "div[.brandtop] div[.brandband] img"; //TODO
     public static final String META_INDEX            = ".//meta[@name='robots']";
 
     public static final String ITEM_HEADER1_CSS      = "input[name='product_id-div']:checked + div.ic .title.oswald";

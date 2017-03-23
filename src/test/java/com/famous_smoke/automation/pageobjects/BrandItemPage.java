@@ -89,7 +89,6 @@ public class BrandItemPage extends BasePage {
         String descriptionText = extractElementText(description, hasDescription());
         String ratingText = extractElementText(rating, hasRating());
         String altTagText = extractElementAttribute(altTag, PageConstants.ATTRIBUTE_ALT, hasAltTag());
-        logger.info(">>>>> alTag "+ altTag);
         if (!ratingText.isEmpty()) {
             ratingText = ratingText.split(RATING_SPLITTER)[0];
         }
