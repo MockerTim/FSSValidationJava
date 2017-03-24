@@ -95,7 +95,6 @@ public class BrandPage extends BasePage {
     public static BrandPageData getBrandData() {
         String header1Text = extractElementText(header1, hasHeader1());
         String descriptionText = extractElementText(description, hasDescription());
-        logger.info("\n >>> BRAND DESCRIPTION --> " +descriptionText+ " :: DESCRIPTION ELEMENT --> "+description+" :: HAS DESCRIPTION --> "+ hasDescription() +"<<<\n");
         String altTagText = extractElementAttribute(altTag, PageConstants.ATTRIBUTE_ALT, hasAltTag());
         String metaIndexContent = extractElementAttribute(
                 metaIndex,
